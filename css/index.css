@@ -232,17 +232,17 @@ html{
     }
    
     #c1{
-background-image: url('../images/google.png');
+background-image: url(../images/google.png);
 background-position: center center;
 background-size: cover;
     }
     #c2{
-background-image: url('../images/yahoo.png');
+background-image: url(../images/yahoo.png);
 background-position: center center;
 background-size: cover;
     }
     #c3{
-     background-image: url('../images/bing.png');
+     background-image: url(../images/bing.png);
      background-position: center center;
      background-size: cover;
     }
