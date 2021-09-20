@@ -1,0 +1,412 @@
+
+*{
+
+padding:0px;
+}
+
+body{
+display:block;
+background-color: black;
+	background-attachment: fixed;
+        background-position: center;
+	background-size: cover;
+margin-top:50px;
+}
+.cloud img{
+width:250px;
+}
+
+#box1{
+position:relative;
+bottom:20px;
+text-align:center;
+}
+
+#box3{
+        padding-top: 3%;
+margin-top:10px;
+text-align:center;
+}
+
+.back {
+        border-radius: 50px;
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    position: relative;
+    top: -10px;
+    left: 1px;
+    padding-top: 10px;
+    color: orange!important;
+    text-align: center;
+    font-size: 28px;
+    background: white;
+   border:2px solid orange;
+   cursor:pointer;
+}
+
+.back:hover{
+ background: orange;
+color: white!important;
+border:2px solid orange;
+}
+#box1{
+        font-weight: 600;
+        color: white;
+        text-align: center;
+        font-size: 70px;
+        font-family: CHILLER import;
+}
+@font-face{
+  font-family:CHILLER import;
+  src: url(../CHILLER.TTF);
+}
+
+
+.cursor{
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        border: 1px solid orange;
+        border-radius: 50%;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        transition: .1s;
+      }
+      
+      .cursor2{
+        position: fixed;
+        width: 8px;
+        height: 8px;
+        background-color: orange;
+        border-radius: 50%;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        transition: .15s;
+      }
+      
+      .content:hover ~ .cursor{
+        transform: translate(-50%, -50%) scale(1.5);
+        background-color: orange;
+        opacity: .5;
+      }
+      
+      .content:hover ~ .cursor2{
+        opacity: 0;
+      }
+
+        @media only screen and (max-width:840px)  {
+
+.back {
+    width: 100px;
+    height: 35px;
+    padding-top: 8px;
+    font-size: 20px;
+border-radius:10px;
+}
+        }
+
+        @media (max-width:654px)  {
+
+.cloud img{
+width:190px;
+height:190px;
+}
+
+
+
+        }
+
+@media (max-width:580px)  {
+.back {
+    width: 70px;
+    height: 30px;
+}
+}
+
+@media (max-width:326px)  {
+.cloud img{
+width:150px;
+height:150px;
+}
+
+}
+  
+ 		
+html{
+	scroll-behavior: smooth;
+  }
+  
+  ::selection{
+	border-radius: 80px;
+	background-color: #fd5f03;
+  }
+  
+  ::-webkit-scrollbar{
+	border-radius: 80px;
+	width: 10px;
+	background-color: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+	border-radius: 80px;
+	background-color: #fd5f03;
+  }
+
+.loader-container{
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 88888;
+      }
+      
+      .obj{
+        width: 6px;
+        height: 40px;
+        background: white;
+        margin: 0 3px;
+        border-radius: 10px;
+        animation: loading 0.8s infinite;
+      }
+      .obj:nth-child(2){
+        animation-delay: 0.1s;
+      }
+      .obj:nth-child(3){
+        animation-delay: 0.2s;
+      }
+      .obj:nth-child(4){
+        animation-delay: 0.3s;
+      }
+      .obj:nth-child(5){
+        animation-delay: 0.4s;
+      }
+      .obj:nth-child(6){
+        animation-delay: 0.5s;
+      }
+      .obj:nth-child(7){
+        animation-delay: 0.6s;
+      }
+      .obj:nth-child(8){
+        animation-delay: 0.7s;
+      }
+
+.nav{
+        display:  none;
+      }
+      
+      .wrapper{
+        right: 60%;
+        top: 88%;
+        position: fixed;
+        display: inline-flex;
+      }
+      .wrapper .icon{
+        margin: 0 20px;
+        text-align: center;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        z-index: 2;
+        transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+      .wrapper .icon span{
+        display: block;
+        height: 60px;
+        width: 60px;
+        background: #ffffff9a;
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+        transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+      .wrapper .icon span i{
+        color: #282627;
+        line-height: 60px;
+        font-size: 25px;
+      }
+      .wrapper .icon .tooltip{
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        background: #fff;
+        color: #fff;
+        padding: 10px 18px;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 25px;
+        opacity: 0;
+        pointer-events: none;
+        box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+        transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+      .wrapper .icon:hover .tooltip{
+        top: -70px;
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .icon .tooltip:before{
+        position: absolute;
+        content: "";
+        height: 15px;
+        width: 15px;
+        background: #fff;
+        left: 50%;
+        bottom: -6px;
+        transform: translateX(-50%) rotate(45deg);
+        transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+      .wrapper .icon:hover span i{
+        color: #fff;
+      }
+      .wrapper .icon:hover span,
+      .wrapper .icon:hover .tooltip{
+        text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+      }
+      .wrapper .Websites:hover span,
+      .wrapper .Websites:hover .tooltip,
+      .wrapper .Websites:hover .tooltip:before{
+        background: #282627;
+      }
+      .wrapper .Games:hover span,
+      .wrapper .Games:hover .tooltip,
+      .wrapper .Games:hover .tooltip:before{
+        background: #46C1F6;
+      }
+      .wrapper .Podcasts:hover span,
+      .wrapper .Podcasts:hover .tooltip,
+      .wrapper .Podcasts:hover .tooltip:before{
+        background: #e1306c;
+      }
+      .wrapper .Books:hover span,
+      .wrapper .Books:hover .tooltip,
+      .wrapper .Books:hover .tooltip:before{
+        background: #46C1F6;
+      }
+      .wrapper .News:hover span,
+      .wrapper .News:hover .tooltip,
+      .wrapper .News:hover .tooltip:before{
+        background: #ff8400;
+      }
+      .wrapper .Download:hover span,
+      .wrapper .Download:hover .tooltip,
+      .wrapper .Download:hover .tooltip:before{
+        background: #08d549;
+      }
+       
+@media screen and (width: 1024px){
+        .wrapper{
+          top: 95%;
+       }
+      }
+
+@media screen and (max-width: 600px){
+        
+       .wrapper{
+        display: none;
+      }
+}
+
+@media(max-width: 980px){
+
+  .cursor{
+    display: none;
+  }
+  .cursor2{
+    display: none;
+  }
+	
+        .wrapper{
+        /* top: 95%; */
+        right: 0%;
+        }
+        
+        .nav{
+        display:  none;
+        }
+        
+        }
+        @media screen and (max-width: 1457px){
+          .wrapper{
+           right: 5%;
+         }
+        
+         .nav{
+          display:  none;
+        }
+        
+        }
+        
+        @media screen and (max-width: 700px){
+          .wrapper{
+            display: none;
+          }
+            .nav {
+              right: 0%;
+              position: fixed;
+              bottom: 0;
+              width: 100%;
+              height: 55px;
+              box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+              background-color: #ffffff;
+              display: flex;
+              overflow-x: auto;
+          }
+          
+          .nav__link {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              flex-grow: 1;
+              min-width: 50px;
+              overflow: hidden;
+              white-space: nowrap;
+              font-family: sans-serif;
+              font-size: 13px;
+              color: #444444;
+              text-decoration: none;
+              -webkit-tap-highlight-color: transparent;
+              transition: background-color 0.1s ease-in-out;
+          }
+          
+          .nav__link:hover {
+              background-color: #282627;
+              color: #ffffff;
+          }
+          
+          .nav__link--active {
+              color: #ff8400;
+          }
+          
+          .nav__icon {
+              font-size: 18px;
+          }
+        }
+        
+        @media(prefers-color-scheme: dark){
+          .nav{
+            background-color: #282627;
+          }
+        
+          .nav__link{
+            color: #f1f1f1;
+          }
+          
+          .nav__link:hover {
+            background-color: #ffffff;
+            color: #282627;
+        }
+        
+        }
