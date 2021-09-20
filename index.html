@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!-- < Created & Designed By-Aakarsh Sharma> -->
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173665972-1"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-173665972-1');
+  </script>
+    
+      <!--push-->
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "f783a437-5b9e-402d-8907-8c24eb5f7c4b",
+    });
+  });
+</script>
+    
+   <!--end push-->
+ <meta name="google-site-verification" content="GANVqG0MCtlSmg2u9H4Se6ZkTZmxAe0JaiAc8pNcjsg" />                             
+    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vFindfit</title>
+
+  <meta name="description" content= "vFindfit- A simple and effective way to find and get what you want in just few taps of your fingers. " />
+<meta name="robots" content= "index, follow">
+
+   <link rel="shartcut icon" type="image/x-icon" href="./images/vFindfit.png"/>
+   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <script src="./js/scripts.js"></script>
+ 
+</head>
+ <!--adsense--> <script data-ad-client="ca-pub-2842009954258772" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<body>
+  <!-- <audio autoplay><source src="audio ke liye." type="audio/mpeg"></audio> -->
+
+    <div class="loader-container">
+      <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+        <div class="obj"></div>
+    </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="inner-width">
+      <a  class="logo"></a>
+      <button class="menu-toggler">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="navbar-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
+        <a href="Categories">Explore</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home -->
+  <section id="home">
+    <div class="inner-width">
+      <div class="content">
+         <img class="logoimg" src="./images/logo.png" alt="" style=" width: 55%; height:100%; ">
+        <h2>Get</h2>
+        <div class="search_box">
+          <div class="menu">
+            <ul type='none' id="car" >
+              <li class="set"><i class="fa fa-cog" ></i>
+             <div class="sub-menu">
+               <ul type='none'>
+               <li><button  class="c" id="c1" onclick="toggle1()"></button></li>
+               <li><button onclick="toggle2()" class="c" id="c2"></button></li>
+               <li><button onclick="toggle3()" class="c" id="c3"></button></li>
+               </ul>
+             </div>
+             </li>
+            </ul>
+             </div>
+             <!-- <span class="find"><i class="fa fa-search" aria-hidden="true"></i></span> -->
+          <form id="google" action="https://www.google.com/search" method="get" target="_blank">
+            <input type="text" name="q" placeholder="Search on Google or type a URL" class="txt">
+            <!-- <input type="submit" value=" " class="but"> -->
+            </form>
+             <form id="yahoo" action="https://in.search.yahoo.com/search" method="get" target="_blank">
+            <input type="text" name="p" placeholder="Search on Yahoo or type a URL" class="txt">
+            <!-- <input type="submit" value=" " class="but"> -->
+            </form>
+             <form id="bing" action="https://www.bing.com/search" method="get" target="_blank">
+            <input type="text" name="q" placeholder="Search on Bing or type a URl" class="txt">
+            <!-- <input type="submit" value=" " class="but"> -->
+            </form>
+       </div>
+        <!-- <div class="sm-i">
+            <a href="Categories"><img src="images/logo-w.png" alt=""><span>WEBSITES</span></a>
+          <a href="http://www.gameso.vfindfit.com/"><img src="images/logo-g.png" alt=""><span>GAMES</span></a>
+          <a href="Podcast"><img src="images/logo-p.png" alt=""><span>PODCASTS</span></a>
+          <a href="https://books.vfindfit.com/"><img src="images/BOOKS.jpeg" alt=""><span>BOOKS</span></a>
+        </div>
+      </div>
+    </div> -->
+
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="inner-width">
+      <h1 class="section-title">About Us</h1>
+      <div class="about-content">
+         <img src="./images/vFindfit.png" alt="" class="about-pic">
+        <div class="about-text">
+          <h2>Make Something Awesome</h2>
+          <p>
+            vFindfit was born from the pain we had in finding great, reliable platform in this world of varieties . And we weren’t alone. Which is why, today we are providing our services in different domains such as searching on web with different search engines only in one bar, Discovering the web without search in more than 10 categories, Free online games, Podcasts, Free ebooks 
+          </p>
+          <br>
+          <h2>Misson</h2>
+          <p>
+            To save time and storage with best alternatives .
+          </p>
+       <!--   <h2>Team</h2>
+          <p>
+            Satvik, Tushar, Aakarsh, Prashant, Kanisth, Shaurya
+          </p>-->
+        </div>
+      </div>
+
+      
+  </section>
+  
+  <!-- Contact -->
+  <section id="contact">
+    <div class="inner-width">
+      <h1 class="section-title">Get in touch</h1>
+      <div class="contact-info">
+        <div class="item">
+          <i class="fas fa-mobile-alt"></i>
+          +91 9119031587
+        </div>
+
+        <div class="item">
+          <i class="fas fa-envelope"></i>
+          vfindfit@gmail.com
+        </div>
+
+        <!-- <div class="item">
+          <i class="fas fa-map-marker-alt"></i>
+          Meerut, Uttar Pradesh 250001, India
+        </div> -->
+      </div>
+
+      <!-- <form action="#" class="contact-form">
+        <input type="text" class="nameZone" placeholder="Your Full Name">
+        <input type="email" class="emailZone" placeholder="Your Email">
+        <input type="text" class="subjectZone" placeholder="Subject">
+        <textarea class="messageZone" placeholder="Message"></textarea>
+        <input type="submit" value="Send Message" class="btn">
+      </form> -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="inner-width">
+      <div class="copyright">
+        &copy; 2020 |<a href="#">vFindfit</a>
+      </div>
+      <div class="sm">
+        <a href="https://www.facebook.com/vfind.fit.1" class="fab fa-facebook-f"></a>
+        <a href="https://twitter.com/vFindfit" class="fab fa-twitter"></a>
+        <a href="https://www.instagram.com/vfindfit/" class="fab fa-instagram"></a>
+        <!-- <a href="#" class="fab fa-linkedin-in"></a>
+        <a href="#" class="fab fa-youtube"></a> -->
+      </div>
+    </div>
+  </footer>
+
+  <div class="wrapper">
+    <a href="Categories.html">
+    <div class="icon Websites">
+      <div class="tooltip">
+    Websites</div>
+    <span><i class="fas fa-globe"></i></span>
+    </div></a>
+    <a href="http://www.gameso.vfindfit.com/">
+    <div class="icon Games">
+      <div class="tooltip">
+    Games</div>
+    <span><i class="fas fa-gamepad"></i></span>
+    </div></a>
+    <a href="Podcast.html">
+    <div class="icon Podcasts">
+      <div class="tooltip">
+    Podcasts</div>
+    <span><i class="fas fa-microphone-alt"></i></span>
+    </div></a>
+    <a href="https://books.vfindfit.com/">
+    <div class="icon Books">
+      <div class="tooltip">
+    Books</div>
+    <span><i class="far fa-bookmark"></i></span>
+    </div></a>
+    <a href="prenews.html">
+    <div class="icon News">
+      <div class="tooltip">
+    News</div>
+    <span><i class="far fa-newspaper"></i></span>
+    </div></a>
+    <a href="Download.html">
+    <div class="icon Download">
+      <div class="tooltip">
+    Downloader</div>
+    <span><i class="fas fa-download"></i></span>
+    </div></a>
+    </div>
+    
+    <nav class="nav">
+    <a href="Categories.html" class="nav__link">
+      <i class="fas fa-globe"></i>
+      <span class="nav__text">Websites</span>
+    </a>
+    <a href="http://www.gameso.vfindfit.com/" class="nav__link nav__link--active">
+      <i class="fas fa-gamepad"></i>
+      <span class="nav__text">Games</span>
+    </a>
+    <a href="Podcast.html" class="nav__link">
+      <i class="fas fa-microphone-alt"></i>
+      <span class="nav__text">Podcasts</span>
+    </a>
+    <a href="https://books.vfindfit.com/" class="nav__link">
+      <i class="far fa-bookmark"></i>
+      <span class="nav__text">Books</span>
+    </a>
+    <a href="prenews.html" class="nav__link">
+      <i class="far fa-newspaper"></i>
+      <span class="nav__text">News</span>
+    </a>
+    <a href="Download.html" class="nav__link">
+      <i class="fas fa-download"></i>
+      <span class="nav__text">Downloader</span>
+    </a>
+    </nav>
+
+  <!-- Go Top BTN -->
+  <button class="goTop fas fa-arrow-up"></button>
+
+  <script>
+    const google=document.getElementById('google');
+     const yahoo=document.getElementById('yahoo');
+     const bing=document.getElementById('bing');
+     function toggle1(){
+       google.style.display='block';
+       yahoo.style.display='none';
+       bing.style.display='none';
+     }
+     function toggle2(){
+       google.style.display='none';
+       yahoo.style.display='block';
+       bing.style.display='none';
+     }
+     function toggle3(){
+       google.style.display='none';
+       yahoo.style.display='none';
+       bing.style.display='block';
+     }
+     </script>
+
+
+ 
+<script>
+  $(window).on("load",function(){
+    $(".loader-container").fadeOut(1000);
+  });
+</script>
+</body>
+</html>

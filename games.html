@@ -1,0 +1,1252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/javascript">
+
+//<![CDATA[
+
+// BloggerJS v0.3.1
+
+// Copyright (c) 2017-2018 Kenny Cruz
+
+// Licensed under the MIT License
+
+var urlTotal,nextPageToken,postsDatePrefix=!1,accessOnly=!1,useApiV3=!1,apiKey="",blogId="",postsOrPages=["pages","posts"],jsonIndex=1,secondRequest=!0,feedPriority=0,amp="&amp;"[0];function urlVal(){var e=window.location.pathname,t=e.length;return".html"===e.substring(t-5)?0:t>1?1:2}function urlMod(){var e=window.location.pathname;"p"===e.substring(1,2)?(e=(e=e.substring(e.indexOf("/",1)+1)).substr(0,e.indexOf(".html")),history.replaceState(null,null,".."+e)):(e=(e=postsDatePrefix?e.substring(1):e.substring(e.indexOf("/",7)+1)).substr(0,e.indexOf(".html")),history.replaceState(null,null,""+e))}function urlSearch(e,t){var n=e+".html";t.forEach(function(e){-1!==e.search(n)&&(window.location=e)})}function urlManager(){var e=urlVal();0===e?accessOnly||urlMod():1===e?getJSON(postsOrPages[feedPriority],1):2===e&&(accessOnly||history.replaceState(null,null,""))}function getJSON(e,t){var n=document.createElement("script");if(useApiV3){var o="https://www.googleapis.com/blogger/v3/blogs/"+blogId+""+e+"?key="+apiKey+"#maxResults=500#fields=nextPageToken%2Citems(url)#callback=bloggerJSON";nextPageToken&&(o+="#pageToken="+nextPageToken),nextPageToken=void 0}else o=window.location.protocol+""+window.location.hostname+"/feeds/"+e+"/default?start-index="+t+"#max-results=150#orderby=published#alt=json-in-script#callback=bloggerJSON";o=o.replace(/#/g,amp),n.type="text/javascript",n.src=o,document.getElementsByTagName("head")[0].appendChild(n)}function bloggerJSON(e){var t=[];if(useApiV3||void 0===urlTotal&&(urlTotal=parseInt(e.feed.openSearch$totalResults.$t)),useApiV3){try{e.items.forEach(function(e,n){t.push(e.url)})}catch(e){}nextPageToken=e.nextPageToken}else try{e.feed.entry.forEach(function(n,o){var r=e.feed.entry[o];r.link.forEach(function(e,n){"alternate"===r.link[n].rel&&t.push(r.link[n].href)})})}catch(e){}urlSearch(window.location.pathname,t),urlTotal>150?(jsonIndex+=150,urlTotal-=150,getJSON(postsOrPages[feedPriority],jsonIndex)):nextPageToken?getJSON(postsOrPages[feedPriority]):secondRequest&&(nextPageToken=void 0,urlTotal=void 0,jsonIndex=1,secondRequest=!1,0===feedPriority?(feedPriority=1,getJSON("posts",1)):1===feedPriority&&(feedPriority=0,getJSON("pages",1)))}function bloggerJS(e){e&&(feedPriority=e),urlManager()}bloggerJS();
+
+//]]>
+
+</script>
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-173665972-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-173665972-1');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vFindfit games</title>
+    <link rel="icon" href="Image/favicon.png" type="image/png">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    
+</head>
+<style>
+    .room{
+        display: flex;
+
+    }
+    #subroom{
+        display: block;
+        position: fixed;
+    }
+    .container{
+        display: grid;
+        border-right: 2px solid black;
+        scroll-behavior: smooth;
+    }
+    .c2{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 3vw;
+        color: #ff9544;
+        text-align: center;
+        border-bottom: 2px solid black;
+    }
+    .c{
+        text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    height: 4vw;
+    width: 22vw;
+    background-color:#ff9544;
+    font-size: 1.9vw;
+    text-align: center;
+    border: white;
+    }
+    .container1{
+        display: block;
+        margin-left: 23vw;
+    }
+    .box{
+        background-color: #ff9544;
+    margin-left: -1%;
+    margin-right: -1%;
+    position: sticky;
+    top:0px; right: 0px;
+    z-index: 1;
+
+    }
+    #btn{
+        display: none;
+        color: #000000;
+    height: 5vw;
+    width: 5vw;
+    position: absolute;
+    border: #ff9544;
+    left: 3vw;
+    top: 2vw;
+    }
+    .but{
+        background-image: url('Image/navbar.png');
+        background-size: cover;
+        background-position: center center;
+    }
+
+    
+    .a1{
+        display: flex;
+    margin-top: -1%;
+    align-items: center;
+    justify-content: center;
+    padding: 2vw;
+    color: white;
+
+    }
+    #box1{
+        display: block;
+       
+    }
+    #t1{
+        background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/fish-story/teaser.jpg?p=pub-19071-18530');
+        background-size: cover;
+        background-position: center center;
+    }
+    #t2{
+        background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/bubble-shooter-free/teaser.jpg?p=pub-19071-18530');
+        background-size: cover;
+        background-position: center center;
+    }
+    #t3{
+        background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/garden-tales/teaser.jpg?p=pub-19071-18530');
+        background-size: cover;
+        background-position: center center;
+    }
+    #t4{
+        background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/candy-mahjong/big_icon.jpg?p=pub-19071-18530');
+        background-size: cover;
+        background-position: center center;
+    }
+    #t5{
+        background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/candy-rain-4/teaser.jpg?p=pub-19071-18530');
+        background-size: cover;
+        background-position: center center;
+    }
+    #t6{
+        background-image: url('https://www.addictinggames.com/sites/default/files/styles/homepage_views_style/public/firemouth.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
+    #t7{
+        background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/real-freekick-3D/teaser.jpg?p=pub-19071-18530');
+        background-size: cover;
+        background-position: center center;
+    }
+    /* #t8{
+        background-image: url('');
+        background-size: cover;
+        background-position: center center;
+    } */
+    #box3{
+        display: block;
+    }
+    #i1{
+        background-image: url('https://www.addictinggames.com/sites/default/files/styles/homepage_views_style/public/jetpackjack.jpg');
+        background-position: center center;
+        background-size: cover;
+    }
+    #i2{
+        background-image: url('https://www.addictinggames.com/sites/default/files/styles/homepage_views_style/public/flappybirdgame.jpg');
+        background-position: center center;
+        background-size: cover;
+    }
+    #i3{
+        background-image: url('https://www.addictinggames.com/sites/default/files/styles/homepage_views_style/public/wotham.jpg');
+        background-position: center center;
+        background-size: cover;
+    }
+    #i4{
+        background-image: url('https://www.addictinggames.com/sites/default/files/styles/homepage_views_style/public/comet-smash_01.jpg');
+        background-position: center center;
+        background-size: cover;
+    }
+    #i5{
+        background-image: url('https://www.addictinggames.com/sites/default/files/styles/homepage_views_style/public/Fruit-Maniac.jpg');
+        background-position: center center;
+        background-size: cover;
+    }
+    #i6{
+        background-image: url('https://www.addictinggames.com/sites/default/files/styles/homepage_views_style/public/Jump-Bottle.jpg');
+        background-position: center center;
+        background-size: cover;
+    }
+    #i7{
+        background-image: url('https://www.addictinggames.com/sites/default/files/styles/homepage_views_style/public/LINE%20DASH%20GAME.jpg');
+        background-position: center center;
+        background-size: cover;
+    }
+    #i8{
+        background-image: url('https://www.addictinggames.com/sites/default/files/styles/homepage_views_style/public/voiddd.jpg');
+        background-position: center center;
+        background-size: cover;
+    }
+    #i9{
+        background-image: url('https://www.addictinggames.com/sites/default/files/styles/homepage_views_style/public/eyeball.jpg');
+        background-position: center center;
+        background-size: cover;
+    }
+    #i10{
+        background-image: url('https://www.addictinggames.com/sites/default/files/styles/homepage_views_style/public/targettttttt_2.jpg');
+        background-position: center center;
+        background-size: cover;
+    }
+    #i11{
+        background-image: url('https://www.addictinggames.com/sites/default/files/styles/homepage_views_style/public/fast-arrow.jpg');
+        background-position: center center;
+        background-size: cover;
+    }
+    /* #i1{
+        background-image: url('');
+        background-position: center center;
+        background-size: cover;
+    } */
+    .b1{
+        display: inline-block;
+    background-color: #ff9544;
+    margin-left: 0%;
+    padding: 1vw 4vw;
+    color: white;
+    }
+    .item{
+        display: grid;
+    margin-left: 6%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2vw 3vw;
+
+    }
+   
+    .c1{
+        height: 21vw;
+    width: 20vw;
+    border-color: #707070;
+    border: 2px;
+    box-sizing: border-box;
+    box-shadow: 5px 6px 5px #000000;
+    }
+    .s1:hover {
+    cursor: pointer;
+    margin-top: 0px;
+    padding: 9.4vw;
+}
+.s1 {
+    text-align: center;
+    background-color: #000000;
+    color: white;
+    box-sizing: border-box;
+    padding: 1vw 0vw;
+    font-size: 2vw;
+    opacity: 0.7;
+    z-index: -1;
+    display: flex;
+    align-content: baseline;
+    justify-content: center;
+    margin-top: 17vw;
+}
+    #box2{
+      display: block;
+    }
+#racing{
+    display: none;
+}
+#r1{
+    background-image: url(' https://d1bjj4kazoovdg.cloudfront.net/assets/games/street-race/teaser.jpg?p=pub-19071-18530');
+    background-position: center center;
+    background-size: cover;
+}
+#r2{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/SprintClubNitroTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#r3{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/2CarsTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#r4{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/StreetRaceFuryTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#r5{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/DontCrashTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#r6{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/PaperPlaneFlightTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#r7{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/BikerStreetTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#r8{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/MotoFuryTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#r9{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/DragRacingClubTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#r10{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/AsphaltSpeedRacing3D_Teaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#r11{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/HighHillsTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#r12{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/BusParking3dTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#r13{
+    background-image: url('https://www.addictinggames.com/sites/default/files/styles/homepage_views_style/public/templequest.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#r14{
+    background-image: url('https://www.addictinggames.com/sites/default/files/styles/homepage_views_style/public/clashed-metal-drifting-wars.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#r15{
+    background-image: url('https://www.addictinggames.com/sites/default/files/styles/homepage_views_style/public/midniteracer.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#r16{
+    background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/bike-racing-2/teaser.jpg?p=pub-19071-18530 ');
+    background-position: center center;
+    background-size: cover;
+}
+#r17{
+    background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/up-hill-racing-2/teaser.jpg?p=pub-19071-18530 ');
+    background-position: center center;
+    background-size: cover;
+}
+#r18{
+    background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/bike-racing/teaser.jpg?p=pub-19071-18530');
+    background-position: center center;
+    background-size: cover;
+}
+#r19{
+    background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/monocycle/teaser.jpg?p=pub-19071-18530');
+    background-position: center center;
+    background-size: cover;
+}
+#r20{
+    background-image: url('');
+    background-position: center center;
+    background-size: cover;
+}
+#board{
+     display: none;
+}
+#br1{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/3dChessTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#br2{
+    background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/daily-sudoku/teaser.jpg?p=pub-19071-18530');
+    background-position: center center;
+    background-size: cover;
+}
+#br3{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/BoatBattlesTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#br4{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/4InARowTeaser_.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#br5{
+    background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/solitaire-tripeaks/teaser.jpg?p=pub-19071-18530');
+    background-position: center center;
+    background-size: cover;
+}
+#br6{
+    background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/360-connect/teaser.jpg?p=pub-19071-18530');
+    background-position: center center;
+    background-size: cover;
+}
+#br7{
+    background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/2020-connect-deluxe/teaser.jpg?p=pub-19071-18530');
+    background-position: center center;
+    background-size: cover;
+}
+#br8{
+    background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/puzzle-fever/teaser.jpg?p=pub-19071-18530');
+    background-position: center center;
+    background-size: cover;
+}
+#br9{
+    background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/2020-blocks/teaser.jpg?p=pub-19071-18530');
+    background-position: center center;
+    background-size: cover;
+}
+#br10{
+    background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/hexa-fever-2/teaser.jpg?p=pub-19071-18530');
+    background-position: center center;
+    background-size: cover;
+}
+#br11{
+    background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/butterfly-kyodai-hd/teaser.jpg?p=pub-19071-18530');
+    background-position: center center;
+    background-size: cover;
+}
+#br12{
+    background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/puzzle-fever/teaser.jpg?p=pub-19071-18530');
+    background-position: center center;
+    background-size: cover;
+}
+#br13{
+    background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/merge-thirteen/teaser.jpg?p=pub-19071-18530');
+    background-position: center center;
+    background-size: cover;
+}
+#br14{
+    background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/2020-blocks/teaser.jpg?p=pub-19071-18530');
+    background-position: center center;
+    background-size: cover;
+}
+/* #br15{
+    background-image: url('');
+    background-position: center center;
+    background-size: cover;
+} */
+
+#action{
+    display: none;
+}
+#ac1{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/RunningJackTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#ac2{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/KULITeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#ac3{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/CannonsAndSoldiersTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#ac4{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/CivilizationsWarsMasterEditionTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#ac5{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/TinyRifles_Teaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#ac6{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/PilotHeroesTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#ac11{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/SkeetChallengeTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#ac7{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/KnifeRainTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#ac8{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/SpectTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#ac9{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/HighJumpTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#ac10{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/SWOOOPTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#ac12{
+    background-image: url('https://www.addictinggames.com/sites/default/files/styles/homepage_views_style/public/bruhgameAG.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#ac13{
+    background-image: url('https://www.addictinggames.com/sites/default/files/styles/homepage_views_style/public/roylz.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#ac14{
+    background-image: url('https://steamcdn-a.akamaihd.net/steam/apps/1255520/capsule_184x69.jpg?t=1590551171');
+    background-position: center center;
+    background-size: cover;
+}
+#ac15{
+    background-image: url('https://www.addictinggames.com/sites/default/files/styles/homepage_views_style/public/impossiblerise.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#ac16{
+    background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/fly-with-rope-2/teaser.jpg?p=pub-19071-18530');
+    background-position: center center;
+    background-size: cover;
+}
+#ac17{
+    background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/viking-king/teaser.jpg?p=pub-19071-18530');
+    background-position: center center;
+    background-size: cover;
+}
+#ac18{
+    background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/kings-return/teaser.jpg?p=pub-19071-18530');
+    background-position: center center;
+    background-size: cover;
+}
+/* #ac19{
+    background-image: url('');
+    background-position: center center;
+    background-size: cover;
+} */
+
+#girls{
+    display: none;
+}
+#d1{
+        background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/BabyLilyBirthday_Teaser.jpg');
+      background-position: center center;
+      background-size: cover;
+    }
+    #d2{
+        background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/CuteUnicornCareTeaser.jpg');
+      background-position: center center;
+      background-size: cover;
+    }
+    #d3{
+        background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/NinaAirlinesTeaser.jpg');
+      background-position: center center;
+      background-size: cover;
+    }
+    #d4{
+        background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/MandalaColoringBookTeaser.jpg');
+      background-position: center center;
+      background-size: cover;
+    }
+    #d5{
+        background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/EmergencySurgeryTeaser.jpg');
+      background-position: center center;
+      background-size: cover;
+    }
+    #d6{
+        background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/NinaDetectiveTeaser.jpg');
+      background-position: center center;
+      background-size: cover;
+    }
+    #d7{
+        background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/PizzaRealifeCookingTeaser.jpg');
+        background-position: center center;
+        background-size: cover;
+    }
+    #d8{
+        background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/WinterMakeupTeaser.jpg');
+        background-position: center center;
+        background-size: cover;
+    }
+    #d9{
+        background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/FashionistaMaldivesTeaser.jpg');
+        background-position: center center;
+        background-size: cover;
+    }
+    #d10{
+        background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/ChocolateBiscuitsTeaser.jpg');
+        background-position: center center;
+        background-size: cover;
+    }
+    #d11{
+        background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/FairyPrincessTeaser.jpg');
+        background-position: center center;
+        background-size: cover;
+    }
+    #d12{
+        background-image: url('https://www.addictinggames.com/sites/default/files/styles/homepage_views_style/public/maryrun.jpg');
+        background-position: center center;
+        background-size: cover;
+    }
+    #d13{
+        background-image: url('https://www.addictinggames.com/sites/default/files/styles/homepage_views_style/public/marbletrap.jpg');
+        background-position: center center;
+        background-size: cover;
+    }
+    #d14{
+        background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/nail-salon-maries-girl-games/teaser.jpg?p=pub-19071-18530');
+        background-position: center center;
+        background-size: cover;
+    }
+    #d15{
+        background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/shoe-designer-maries-girl-games/teaser.jpg?p=pub-19071-18530 ');
+        background-position: center center;
+        background-size: cover;
+    }
+    #d16{
+        background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/candy-slide/teaser.jpg?p=pub-19071-18530');
+        background-position: center center;
+        background-size: cover;
+    }
+    #d17{
+        background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/master-tournament/teaser.jpg?p=pub-19071-18530');
+        background-position: center center;
+        background-size: cover;
+    }
+    /* #d18{
+        background-image: url('');
+        background-position: center center;
+        background-size: cover;
+    } */
+   
+#skills{
+    display: none;
+}
+#sk1{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/TowerCrash3dTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#sk2{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/ArcheryWorldTourTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#sk3{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/SlamDunkBasketballTeaserB.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#sk4{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/PickALockTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#sk5{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/ClassicBowlingTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#sk6{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/GoalkeeperChallengeTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#sk7{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/ArcadeGolfNeonTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#sk8{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/100GolfBallsTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#sk9{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/BaseballProTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#sk10{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/3DPenaltyTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#sk11{
+    background-image: url('https://img.cdn.famobi.com/portal/html5games/images/tmp/BottleFlipChallengeTeaser.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#sk12{
+    background-image: url('https://www.addictinggames.com/sites/default/files/styles/homepage_views_style/public/ball-in-the-hole_sp.png');
+    background-position: center center;
+    background-size: cover;
+}
+#sk13{
+    background-image: url('https://www.addictinggames.com/sites/default/files/styles/homepage_views_style/public/blockcrusher.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#sk14{
+    background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/apothecarium/teaser.jpg?p=pub-19071-18530');
+    background-position: center center;
+    background-size: cover;
+}
+#sk15{
+    background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/down-the-hill/teaser.jpg?p=pub-19071-18530');
+    background-position: center center;
+    background-size: cover;
+}
+#sk16{
+    background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/hamster-go-home/teaser.jpg?p=pub-19071-18530');
+    background-position: center center;
+    background-size: cover;
+}
+#sk17{
+    background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/touch-and-catch-winter-fun/teaser.jpg?p=pub-19071-18530');
+    background-position: center center;
+    background-size: cover;
+}
+#sk18{
+    background-image: url('https://d1bjj4kazoovdg.cloudfront.net/assets/games/circle-circus/teaser.jpg?p=pub-19071-18530');
+    background-position: center center;
+    background-size: cover;
+}
+/* #sk19{
+    background-image: url('');
+    background-position: center center;
+    background-size: cover;
+} */
+
+@media(max-width: 800px){
+  #btn{
+      display: block;
+  }
+  #subroom{
+      display: none;
+      position: relative;
+  }
+  .container1{
+      margin-left: 0px;
+  }
+  .item{
+      grid-gap: 5vw 5vw;
+  }
+  .c1{
+    height: 28vw;
+    width: 25vw;
+  }
+  .s1{
+      margin-top: 24vw;
+  }
+  .s1:hover{
+      padding: 12.9;
+  }
+  .container{
+      border-right: white;
+      
+  }
+  .c{
+    height: 11.7vw;
+    width: 95vw;
+    font-size: 6.9vw;
+  }
+  .c2{
+    font-size: 9vw;
+  }
+
+
+}
+@media(max-width: 500px){
+    #btn{
+        height: 32px;
+        width: 28px;
+    }
+}
+
+</style>
+<body>
+    <div class="box">
+      <button class="but" id="btn" onclick="toggle100hide()">
+          <!-- navbar... -->
+      </button> 
+        <h1 class="a1">vFindfit Games</h3>
+    </div>
+    <div class="room">
+        <div id="subroom">
+        <div class="container">
+            <h3 class="c2"><b>Categories</b></h3>
+            <button class="c" id="g6" onclick="togglehide5()">Home</button>
+          <button class="c" id="g1" onclick="togglehide()">Racing</button>
+          <button class="c" id="g2" onclick="togglehide1()">Board Games</button>
+          <button class="c" id="g3" onclick="togglehide2()">Action Games</button>
+          <button class="c" id="g4" onclick="togglehide3()">Girls</button>
+          <button class="c" id="g5" onclick="togglehide4()">Skills</button>
+          <!-- <button class="c" id="g7" onclick="togglehide6()">unknown</button> -->
+        </div>
+    </div>
+    <div class="container1">
+    <div id="box1">
+        <h2 class="b1">Top Grossing</h2>
+        <section class="item">
+            <a href="https://games.softgames.com/games/fish-story/gamesites/10103/" class="c1" id="t1" target="_blank"><span class="s1">FishStory</span></a>
+            <a href="https://games.softgames.com/games/bubble-shooter-free/gamesites/10103/" class="c1" id="t2" target="_blank"><span class="s1">BubbleShooter</span></a>
+            <a href="https://games.softgames.com/games/garden-tales/gamesites/10103/" class="c1" id="t3" target="_blank"><span class="s1">GardenTales</span></a>
+            <a href="https://games.softgames.com/games/candy-mahjong/gamesites/10103/" class="c1" id="t4" target="_blank"><span class="s1">CandyMahjong</span></a>
+            <a href="https://games.softgames.com/games/candy-rain-4/gamesites/10103/" class="c1" id="t5" target="_blank"><span class="s1">CandyRain4</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23909" class="c1" id="t6" target="_blank"><span class="s1">Daragon3D</span></a>
+            <a href="https://games.softgames.com/games/real-freekick-3D/gamesites/10103/" class="c1" id="t7" target="_blank"><span class="s1">FreeKick3D</span></a>
+            <!-- <a href="" class="c1" id="t8" target="_blank"><span class="s1">FortNight</span></a> -->
+        </section>
+    </div>
+    <div id="box2">
+        <h2 class="b1">Addictive Games</h2>
+        <section class="item">
+            <a href="https://www.addictinggames.com/embed/html5-games/23667" target="_blank" class="c1" id="i1"><span class="s1">Jetpack-Jack</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/24032" target="_blank" class="c1" id="i2"><span class="s1">FlappyBird </span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23931" target="_blank" class="c1" id="i3"><span class="s1">WothanEscape</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23721" target="_blank" class="c1" id="i4"><span class="s1">Comet-Smash</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23732" target="_blank" class="c1" id="i5"><span class="s1">FruitManiac</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23571" target="_blank" class="c1" id="i6"><span class="s1">JumpBottle</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23966" target="_blank" class="c1" id="i7"><span class="s1">LineDash </span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23741" target="_blank" class="c1" id="i8"><span class="s1">NeonBlitz</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23933" target="_blank" class="c1" id="i9"><span class="s1">Squeezer</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23901" target="_blank" class="c1" id="i10"><span class="s1">TargetCoaster </span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23585" target="_blank" class="c1" id="i11"><span class="s1">FastArrow</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23909" target="_blank" class="c1" id="t6"><span class="s1">Daragon3D</span></a>
+            <a href="https://games.softgames.com/games/real-freekick-3D/gamesites/10103/" target="_blank" class="c1" id="t7"><span class="s1">FreeKick3D</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23461" target="_blank" class="c1" id="r13"><span class="s1">TempleQuest </span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23685" target="_blank" class="c1" id="r14"><span class="s1">DesertDrift</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23695" target="_blank" class="c1" id="r15"><span class="s1">Traffic3D</span></a>
+            <a href="https://games.softgames.com/games/bike-racing-2/gamesites/10103/" target="_blank" class="c1" id="r16"><span class="s1">BikeRacing2</span></a>
+            <a href="https://games.softgames.com/games/up-hill-racing-2/gamesites/10103/" target="_blank" class="c1" id="r17"><span class="s1">HillClimb </span></a>
+            <a href="https://games.softgames.com/games/bike-racing/gamesites/10103/" target="_blank" class="c1" id="r18"><span class="s1">BikeRace </span></a>
+            <a href="https://games.softgames.com/games/monocycle/gamesites/10103/" target="_blank" class="c1" id="r19"><span class="s1">Monocycle </span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/24539" target="_blank" class="c1" id="ac12"><span class="s1">Bruh</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/24389" target="_blank" class="c1" id="ac13"><span class="s1">Royalz</span></a>
+            <a href="https://www.addictinggames.com/io-games/raid-land" target="_blank" class="c1" id="ac14"><span class="s1">RaidLand(onlyPC)</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23597" target="_blank" class="c1" id="ac15"><span class="s1">ImpossibleRise</span></a>
+            <a href="https://games.softgames.com/games/fly-with-rope-2/gamesites/10103/" target="_blank" class="c1" id="ac16"><span class="s1">FlyingRope</span></a>
+            <a href="https://games.softgames.com/games/viking-king/gamesites/10103/" target="_blank" class="c1" id="ac17"><span class="s1">VikingKing</span></a>
+            <a href="https://games.softgames.com/games/kings-return/gamesites/10103/" target="_blank" class="c1" id="ac18"><span class="s1">King’sReturn</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/24548" target="_blank" class="c1" id="d12"><span class="s1">MaryRun</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/24532" target="_blank" class="c1" id="d13"><span class="s1">MarbleTrap</span></a>            
+            <a href="https://www.addictinggames.com/embed/html5-games/19720" target="_blank" class="c1" id="sk12"><span class="s1">BallInTheHole</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/24530" target="_blank" class="c1" id="sk13"><span class="s1">BlockCrusher </span></a>
+            <a href="https://games.softgames.com/games/apothecarium/gamesites/10103/" target="_blank" class="c1" id="sk14"><span class="s1">Apothecarium</span></a>
+            <a href="https://games.softgames.com/games/down-the-hill/gamesites/10103/" target="_blank" class="c1" id="sk15"><span class="s1">DownTheHill</span></a>
+            <a href="https://games.softgames.com/games/hamster-go-home/gamesites/10103/" target="_blank" class="c1" id="sk16"><span class="s1">HamsterGoHome</span></a>
+            <a href="https://games.softgames.com/games/touch-and-catch-winter-fun/gamesites/10103/" target="_blank" class="c1" id="sk17"><span class="s1">Touch&Catch</span></a>
+            <a href="https://games.softgames.com/games/circle-circus/gamesites/10103/" target="_blank" class="c1" id="sk18"><span class="s1">CircleCircus </span></a>
+            <!-- <a href="" class="c1" id="i12" target="_blank"><span class="s1"></span></a> -->
+        </section>
+    </div>
+    <div id="box3">
+        <h2 class="b1">For You</h2>
+        <section class="item">
+            <a href="https://games.softgames.com/games/fish-story/gamesites/10103/" target="_blank" class="c1" id="t1"><span class="s1">FishStory</span></a>
+            <a href="https://games.softgames.com/games/bubble-shooter-free/gamesites/10103/" target="_blank" class="c1" id="t2"><span class="s1">BubbleShooter</span></a>
+            <a href="https://games.softgames.com/games/garden-tales/gamesites/10103/" target="_blank" class="c1" id="t3"><span class="s1">GardenTales</span></a>
+            <a href="https://games.softgames.com/games/candy-mahjong/gamesites/10103/" target="_blank" class="c1" id="t4"><span class="s1">CandyMahjong</span></a>
+            <a href="https://games.softgames.com/games/candy-rain-4/gamesites/10103/" target="_blank" class="c1" id="t5"><span class="s1">CandyRain4</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23909" target="_blank" class="c1" id="t6"><span class="s1">Daragon3D</span></a>
+            <a href="https://games.softgames.com/games/real-freekick-3D/gamesites/10103/" target="_blank" class="c1" id="t7"><span class="s1">FreeKick3D</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23667" target="_blank" class="c1" id="i1"><span class="s1">Jetpack-Jack</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/24032" target="_blank" class="c1" id="i2"><span class="s1">FlappyBird </span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23931" target="_blank" class="c1" id="i3"><span class="s1">WothanEscape</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23721" target="_blank" class="c1" id="i4"><span class="s1">Comet-Smash</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23732" target="_blank" class="c1" id="i5"><span class="s1">FruitManiac</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23571" target="_blank" class="c1" id="i6"><span class="s1">JumpBottle</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23966" target="_blank" class="c1" id="i7"><span class="s1">LineDash </span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23741" target="_blank" class="c1" id="i8"><span class="s1">NeonBlitz</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23933" target="_blank" class="c1" id="i9"><span class="s1">Squeezer</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23901" target="_blank" class="c1" id="i10"><span class="s1">TargetCoaster </span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23585" target="_blank" class="c1" id="i11"><span class="s1">FastArrow</span></a>
+            <a href=" https://games.softgames.com/games/street-race/gamesites/10103/
+            " class="c1" id="r1" target="_blank"><span class="s1">streetrace</span></a>
+            <a href="https://play.famobi.com/sprint-club-nitro/A-CIYPT" target="_blank" class="c1" id="r2"><span class="s1">SprintClubNitro</span></a>
+            <a href=" https://play.famobi.com/2cars/A-CIYPT" target="_blank" class="c1" id="r3"><span class="s1">2Cars</span></a>
+            <a href="https://play.famobi.com/streetrace-fury/A-CIYPT" target="_blank" class="c1" id="r4"><span class="s1">StreetRaceFury</span></a>
+            <a href=" https://play.famobi.com/dont-crash/A-CIYPT" target="_blank" class="c1" id="r5"><span class="s1">Don’tCrash</span></a>
+            <a href=" https://play.famobi.com/paper-plane-flight/A-CIYPT" target="_blank" class="c1" id="r6"><span class="s1">PaperPlaneFlight</span></a>
+            <a href=" https://play.famobi.com/biker-street/A-CIYPT" target="_blank" class="c1" id="r7"><span class="s1">BikerStreet</span></a>
+            <a href=" https://play.famobi.com/moto-fury/A-CIYPT" target="_blank" class="c1" id="r8"><span class="s1">MotoFury</span></a>
+            <a href=" https://play.famobi.com/drag-racing-club/A-CIYPT" target="_blank" class="c1" id="r9"><span class="s1"> DragRacingClub</span></a>
+            <a href="https://play.famobi.com/asphalt-speed-racing-3d/A-CIYPT" target="_blank" class="c1" id="r10"><span class="s1">AsphaltSpeedRacing3D</span></a>
+            <a href=" https://play.famobi.com/high-hills/A-CIYPT" target="_blank" class="c1" id="r11"><span class="s1">Highhills</span></a>
+            <a href=" https://play.famobi.com/bus-parking-3d/A-CIYPT" target="_blank" class="c1" id="r12"><span class="s1">BusParking3D</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23461" target="_blank" class="c1" id="r13"><span class="s1">TempleQuest </span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23685" target="_blank" class="c1" id="r14"><span class="s1">DesertDrift</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23695" target="_blank" class="c1" id="r15"><span class="s1">Traffic3D</span></a>
+            <a href="https://games.softgames.com/games/bike-racing-2/gamesites/10103/" target="_blank" class="c1" id="r16"><span class="s1">BikeRacing2</span></a>
+            <a href="https://games.softgames.com/games/up-hill-racing-2/gamesites/10103/" target="_blank" class="c1" id="r17"><span class="s1">HillClimb </span></a>
+            <a href="https://games.softgames.com/games/bike-racing/gamesites/10103/" target="_blank" class="c1" id="r18"><span class="s1">BikeRace </span></a>
+            <a href="https://games.softgames.com/games/monocycle/gamesites/10103/" target="_blank" class="c1" id="r19"><span class="s1">Monocycle </span></a>
+            <a href="https://play.famobi.com/3d-chess/A-CIYPT" target="_blank" class="c1" id="br1"><span class="s1">Chess3D</span></a>
+            <a href="https://games.softgames.com/games/daily-sudoku/gamesites/10103/" target="_blank" class="c1" id="br2"><span class="s1">Sudoku </span></a>
+            <a href="https://play.famobi.com/boat-battles/A-CIYPT" target="_blank" class="c1" id="br3"><span class="s1">Boatbattle</span></a>
+            <a href="link :https://play.famobi.com/4-in-a-row/A-CIYPT" target="_blank" class="c1" id="br4"><span class="s1">4InARow </span></a>
+            <a href="https://games.softgames.com/games/solitaire-tripeaks/gamesites/10103/" target="_blank" class="c1" id="br5"><span class="s1">SolitaireStory</span></a>
+            <a href="https://games.softgames.com/games/360-connect/gamesites/10103/" target="_blank" class="c1" id="br6"><span class="s1">360Connect</span></a>
+            <a href="https://games.softgames.com/games/2020-connect-deluxe/gamesites/10103/" target="_blank" class="c1" id="br7"><span class="s1">2020ConnectDeluxe</span></a>
+            <a href="https://games.softgames.com/games/puzzle-fever/gamesites/10103/" target="_blank" class="c1" id="br8"><span class="s1">PuzzleFever</span></a>
+            <a href="https://games.softgames.com/games/2020-blocks/gamesites/10103/" target="_blank" class="c1" id="br9"><span class="s1">2020Blocks</span></a>
+            <a href="https://games.softgames.com/games/hexa-fever-2/gamesites/10103/" target="_blank" class="c1" id="br10"><span class="s1">HexaFever2</span></a>
+            <a href="https://games.softgames.com/games/butterfly-kyodai-hd/gamesites/10103/" target="_blank" class="c1" id="br11"><span class="s1">ButterflyKyodai</span></a>
+            <a href="https://games.softgames.com/games/puzzle-fever/gamesites/10103/" target="_blank" class="c1" id="br12"><span class="s1">PuzzleFever </span></a>
+            <a href="https://games.softgames.com/games/merge-thirteen/gamesites/10103/" target="_blank" class="c1" id="br13"><span class="s1">MergeThirteen</span></a>
+            <a href="https://games.softgames.com/games/2020-block…" target="_blank" class="c1" id="br14"><span class="s1">2020Blocks </span></a>
+            <a href="https://games.softgames.com/games/hexa-fever-2/gamesites/10103/" target="_blank" class="c1" id="ac1"><span class="s1">RunninngJack </span></a>
+            <a href="https://play.famobi.com/kuli/A-CIYPT" target="_blank" class="c1" id="ac2"><span class="s1">K.U.L.I</span></a>
+            <a href="https://play.famobi.com/cannons-and-soldiers/A-CIYPT" target="_blank" class="c1" id="ac3"><span class="s1">CannonsAndSoldiers</span></a>
+            <a href="https://play.famobi.com/civilizations-wars-all-stars/A-CIYPT" target="_blank" class="c1" id="ac4"><span class="s1">CivilizationsW.M.E</span></a>
+            <a href="https://play.famobi.com/tiny-rifles/A-CIYPT" target="_blank" class="c1" id="ac5"><span class="s1">TinyRifles</span></a>
+            <a href="https://play.famobi.com/pilot-heroes/A-CIYPT" target="_blank" class="c1" id="ac6"><span class="s1">PilotHeroes</span></a>
+            <a href="https://play.famobi.com/knife-rain/A-CIYPT" target="_blank" class="c1" id="ac7"><span class="s1">KnifeRain</span></a>
+            <a href="https://play.famobi.com/spect/A-CIYPT" target="_blank" class="c1" id="ac8"><span class="s1">Spect</span></a>
+            <a href="https://play.famobi.com/highjump/A-CIYPT" target="_blank" class="c1" id="ac9"><span class="s1">KibaKumbaHighjump</span></a>
+            <a href="https://play.famobi.com/swooop/A-CIYPT" target="_blank" class="c1" id="ac10"><span class="s1">SWOOOP</span></a>
+            <a href="https://play.famobi.com/skeet-challenge/A-CIYPT" target="_blank" class="c1" id="ac11"><span class="s1">SkeetChallenge</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/24539" target="_blank" class="c1" id="ac12"><span class="s1">Bruh</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/24389" target="_blank" class="c1" id="ac13"><span class="s1">Royalz</span></a>
+            <a href="https://www.addictinggames.com/io-games/raid-land" target="_blank" class="c1" id="ac14"><span class="s1">RaidLand(onlyPC)</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23597" target="_blank" class="c1" id="ac15"><span class="s1">ImpossibleRise</span></a>
+            <a href="https://games.softgames.com/games/fly-with-rope-2/gamesites/10103/" target="_blank" class="c1" id="ac16"><span class="s1">FlyingRope</span></a>
+            <a href="https://games.softgames.com/games/viking-king/gamesites/10103/" target="_blank" class="c1" id="ac17"><span class="s1">VikingKing</span></a>
+            <a href="https://games.softgames.com/games/kings-return/gamesites/10103/" target="_blank" class="c1" id="ac18"><span class="s1">King’sReturn</span></a>
+            <a href="https://play.famobi.com/baby-lily-birthday/A-CIYPT" target="_blank" class="c1" id="d1"><span class="s1">BabyLilyBirthday</span></a>
+            <a href="https://play.famobi.com/cute-unicorn-care/A-CIYPT" target="_blank" class="c1" id="d2"><span class="s1">CuteUnicornCare</span></a>
+            <a href="https://play.famobi.com/nina-airlines/A-CIYPT" target="_blank" class="c1" id="d3"><span class="s1">Nina-Airlines</span></a>
+            <a href="https://play.famobi.com/mandala-coloring-book/A-CIYPT" target="_blank" class="c1" id="d4"><span class="s1">MandalaColoringBook</span></a>
+            <a href="https://play.famobi.com/emergency-surgery/A-CIYPT" target="_blank" class="c1" id="d5"><span class="s1">EmergencySurgery</span></a>
+            <a href="https://play.famobi.com/nina-detective/A-CIYPT" target="_blank" class="c1" id="d6"><span class="s1">Nina-Detective</span></a>
+            <a href="https://play.famobi.com/pizza-realife-cooking/A-CIYPT" target="_blank" class="c1" id="d7"><span class="s1">PizzaRealifeCooking</span></a>
+            <a href="https://play.famobi.com/winter-makeup/A-CIYPT" target="_blank" class="c1" id="d8"><span class="s1">WinterMakeup</span></a>
+            <a href="https://play.famobi.com/fashionista-maldives/A-CIYPT" target="_blank" class="c1" id="d9"><span class="s1">FashionistaMaldives</span></a>
+            <a href="https://play.famobi.com/chocolate-biscuits/A-CIYPT" target="_blank" class="c1" id="d10"><span class="s1">ChocolateBiscuits</span></a>
+            <a href="https://play.famobi.com/fairy-princess/A-CIYPT" target="_blank" class="c1" id="d11"><span class="s1">FairyPrincess</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/24548" target="_blank" class="c1" id="d12"><span class="s1">MaryRun</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/24532" target="_blank" class="c1" id="d13"><span class="s1">MarbleTrap</span></a>
+            <a href="https://games.softgames.com/games/nail-salon-maries-girl-games/gamesites/10103/" target="_blank" class="c1" id="d14"><span class="s1">NailSaloon </span></a>
+            <a href="https://games.softgames.com/games/shoe-designer-maries-girl-games/gamesites/10103/" target="_blank" class="c1" id="d15"><span class="s1">ShoeDesigner </span></a>
+            <a href="https://games.softgames.com/games/candy-slide/gamesites/10103/" target="_blank" class="c1" id="d16"><span class="s1">CandyCrusher </span></a>
+            <a href="https://games.softgames.com/games/master-tournament/gamesites/10103/" target="_blank" class="c1" id="d17"><span class="s1">8BallPools</span></a>
+            <a href="https://play.famobi.com/tower-crash-3d/A-CIYPT" target="_blank" class="c1" id="sk1"><span class="s1">TowerCrash3D</span></a>
+            <a href="https://play.famobi.com/archery-world-tour/A-CIYPT" target="_blank" class="c1" id="sk2"><span class="s1">ArcheryWorldTour</span></a>
+            <a href="https://play.famobi.com/slam-dunk-basketball/A-CIYPT" target="_blank" class="c1" id="sk3"><span class="s1">SlamDunkBasketball</span></a>
+            <a href="https://play.famobi.com/pick-a-lock/A-CIYPT" target="_blank" class="c1" id="sk4"><span class="s1">PickALock</span></a>
+            <a href="https://play.famobi.com/classic-bowling/A-CIYPT" target="_blank" class="c1" id="sk5"><span class="s1">ClassicBowling</span></a>
+            <a href="https://play.famobi.com/goalkeeper-challenge/A-CIYPT" target="_blank" class="c1" id="sk6"><span class="s1">GoalkeeperChallenge</span></a>
+            <a href="https://play.famobi.com/arcade-golf-neon/A-CIYPT" target="_blank" class="c1" id="sk7"><span class="s1">ArcadeGolf:NEON</span></a>
+            <a href="https://play.famobi.com/100-golf-balls/A-CIYPT" target="_blank" class="c1" id="sk8"><span class="s1">100GolfBalls</span></a>
+            <a href="https://play.famobi.com/baseball-pro/A-CIYPT" target="_blank" class="c1" id="sk9"><span class="s1">BaseballPro</span></a>
+            <a href="https://play.famobi.com/3d-penalty/A-CIYPT" target="_blank" class="c1" id="sk10"><span class="s1">3DPenalty</span></a>
+            <a href="https://play.famobi.com/bottle-flip-challenge/A-CIYPT" target="_blank" class="c1" id="sk11"><span class="s1">BottleFlipChallenge</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/19720" target="_blank" class="c1" id="sk12"><span class="s1">BallInTheHole</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/24530" target="_blank" class="c1" id="sk13"><span class="s1">BlockCrusher </span></a>
+            <a href="https://games.softgames.com/games/apothecarium/gamesites/10103/" target="_blank" class="c1" id="sk14"><span class="s1">Apothecarium</span></a>
+            <a href="https://games.softgames.com/games/down-the-hill/gamesites/10103/" target="_blank" class="c1" id="sk15"><span class="s1">DownTheHill</span></a>
+            <a href="https://games.softgames.com/games/hamster-go-home/gamesites/10103/" target="_blank" class="c1" id="sk16"><span class="s1">HamsterGoHome</span></a>
+            <a href="https://games.softgames.com/games/touch-and-catch-winter-fun/gamesites/10103/" target="_blank" class="c1" id="sk17"><span class="s1">Touch&Catch</span></a>
+            <a href="https://games.softgames.com/games/circle-circus/gamesites/10103/" target="_blank" class="c1" id="sk18"><span class="s1">CircleCircus </span></a>
+        </section>
+    </div>
+    <div id="racing">
+        <h2 class="b1">Racing</h2>
+        <section class="item">
+            <a href=" https://games.softgames.com/games/street-race/gamesites/10103/
+            " target="_blank" class="c1" id="r1"><span class="s1">streetrace</span></a>
+            <a href="https://play.famobi.com/sprint-club-nitro/A-CIYPT" target="_blank" class="c1" id="r2"><span class="s1">SprintClubNitro</span></a>
+            <a href=" https://play.famobi.com/2cars/A-CIYPT" class="c1" target="_blank" id="r3"><span class="s1">2Cars</span></a>
+            <a href="https://play.famobi.com/streetrace-fury/A-CIYPT" target="_blank" class="c1" id="r4"><span class="s1">StreetRaceFury</span></a>
+            <a href=" https://play.famobi.com/dont-crash/A-CIYPT" target="_blank" class="c1" id="r5"><span class="s1">Don’tCrash</span></a>
+            <a href=" https://play.famobi.com/paper-plane-flight/A-CIYPT" target="_blank" class="c1" id="r6"><span class="s1">PaperPlaneFlight</span></a>
+            <a href=" https://play.famobi.com/biker-street/A-CIYPT" target="_blank" class="c1" id="r7"><span class="s1">BikerStreet</span></a>
+            <a href=" https://play.famobi.com/moto-fury/A-CIYPT" target="_blank" class="c1" id="r8"><span class="s1">MotoFury</span></a>
+            <a href=" https://play.famobi.com/drag-racing-club/A-CIYPT" target="_blank" class="c1" id="r9"><span class="s1"> DragRacingClub</span></a>
+            <a href="https://play.famobi.com/asphalt-speed-racing-3d/A-CIYPT" target="_blank" class="c1" id="r10"><span class="s1">AsphaltSpeedRacing3D</span></a>
+            <a href=" https://play.famobi.com/high-hills/A-CIYPT" target="_blank" class="c1" id="r11"><span class="s1">Highhills</span></a>
+            <a href=" https://play.famobi.com/bus-parking-3d/A-CIYPT" target="_blank" class="c1" id="r12"><span class="s1">BusParking3D</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23461" target="_blank" class="c1" id="r13"><span class="s1">TempleQuest </span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23685" target="_blank" class="c1" id="r14"><span class="s1">DesertDrift</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23695" target="_blank" class="c1" id="r15"><span class="s1">Traffic3D</span></a>
+            <a href="https://games.softgames.com/games/bike-racing-2/gamesites/10103/" target="_blank" class="c1" id="r16"><span class="s1">BikeRacing2</span></a>
+            <a href="https://games.softgames.com/games/up-hill-racing-2/gamesites/10103/" target="_blank" class="c1" id="r17"><span class="s1">HillClimb </span></a>
+            <a href="https://games.softgames.com/games/bike-racing/gamesites/10103/" target="_blank" class="c1" id="r18"><span class="s1">BikeRace </span></a>
+            <a href="https://games.softgames.com/games/monocycle/gamesites/10103/" target="_blank" class="c1" id="r19"><span class="s1">Monocycle </span></a>
+            <!-- <a href="" class="c1" id="r19" target="_blank"><span class="s1"></span></a> -->
+           
+        </section>
+    </div>
+    <div id="board">
+        <h2 class="b1">Board Games</h2>
+        <section class="item">
+            <a href="https://play.famobi.com/3d-chess/A-CIYPT" target="_blank" class="c1" id="br1"><span class="s1">Chess3D</span></a>
+            <a href="https://games.softgames.com/games/daily-sudoku/gamesites/10103/" target="_blank" class="c1" id="br2"><span class="s1">Sudoku </span></a>
+            <a href="https://play.famobi.com/boat-battles/A-CIYPT" target="_blank" class="c1" id="br3"><span class="s1">Boatbattle</span></a>
+            <a href="link :https://play.famobi.com/4-in-a-row/A-CIYPT" target="_blank" class="c1" id="br4"><span class="s1">4InARow </span></a>
+            <a href="https://games.softgames.com/games/solitaire-tripeaks/gamesites/10103/" target="_blank" class="c1" id="br5"><span class="s1">SolitaireStory</span></a>
+            <a href="https://games.softgames.com/games/360-connect/gamesites/10103/" target="_blank" class="c1" id="br6"><span class="s1">360Connect</span></a>
+            <a href="https://games.softgames.com/games/2020-connect-deluxe/gamesites/10103/" target="_blank" class="c1" id="br7"><span class="s1">2020ConnectDeluxe</span></a>
+            <a href="https://games.softgames.com/games/puzzle-fever/gamesites/10103/" target="_blank" class="c1" id="br8"><span class="s1">PuzzleFever</span></a>
+            <a href="https://games.softgames.com/games/2020-blocks/gamesites/10103/" target="_blank" class="c1" id="br9"><span class="s1">2020Blocks</span></a>
+            <a href="https://games.softgames.com/games/hexa-fever-2/gamesites/10103/" target="_blank" class="c1" id="br10"><span class="s1">HexaFever2</span></a>
+            <a href="https://games.softgames.com/games/butterfly-kyodai-hd/gamesites/10103/" target="_blank" class="c1" id="br11"><span class="s1">ButterflyKyodai</span></a>
+            <a href="https://games.softgames.com/games/puzzle-fever/gamesites/10103/" target="_blank" class="c1" id="br12"><span class="s1">PuzzleFever </span></a>
+            <a href="https://games.softgames.com/games/merge-thirteen/gamesites/10103/" target="_blank" class="c1" id="br13"><span class="s1">MergeThirteen</span></a>
+            <a href="https://games.softgames.com/games/2020-block…" target="_blank" class="c1" id="br14"><span class="s1">2020Blocks </span></a>
+            <!-- <a href="" class="c1" id="br15" target="_blank"><span class="s1"></span></a> -->
+            
+        </section>
+    </div>
+    <div id="action">
+        <h2 class="b1">Action Games</h2>
+        <section class="item">
+            <a href="https://games.softgames.com/games/hexa-fever-2/gamesites/10103/" target="_blank" class="c1" id="ac1"><span class="s1">RunninngJack </span></a>
+            <a href="https://play.famobi.com/kuli/A-CIYPT" target="_blank" class="c1" id="ac2"><span class="s1">K.U.L.I</span></a>
+            <a href="https://play.famobi.com/cannons-and-soldiers/A-CIYPT" target="_blank" class="c1" id="ac3"><span class="s1">CannonsAndSoldiers</span></a>
+            <a href="https://play.famobi.com/civilizations-wars-all-stars/A-CIYPT" target="_blank" class="c1" id="ac4"><span class="s1">CivilizationsW.M.E</span></a>
+            <a href="https://play.famobi.com/tiny-rifles/A-CIYPT" target="_blank" class="c1" id="ac5"><span class="s1">TinyRifles</span></a>
+            <a href="https://play.famobi.com/pilot-heroes/A-CIYPT" target="_blank" class="c1" id="ac6"><span class="s1">PilotHeroes</span></a>
+            <a href="https://play.famobi.com/knife-rain/A-CIYPT" target="_blank" class="c1" id="ac7"><span class="s1">KnifeRain</span></a>
+            <a href="https://play.famobi.com/spect/A-CIYPT" target="_blank" class="c1" id="ac8"><span class="s1">Spect</span></a>
+            <a href="https://play.famobi.com/highjump/A-CIYPT" target="_blank" class="c1" id="ac9"><span class="s1">KibaKumbaHighjump</span></a>
+            <a href="https://play.famobi.com/swooop/A-CIYPT" target="_blank" class="c1" id="ac10"><span class="s1">SWOOOP</span></a>
+            <a href="https://play.famobi.com/skeet-challenge/A-CIYPT" target="_blank" class="c1" id="ac11"><span class="s1">SkeetChallenge</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/24539" target="_blank" class="c1" id="ac12"><span class="s1">Bruh</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/24389" target="_blank" class="c1" id="ac13"><span class="s1">Royalz</span></a>
+            <a href="https://www.addictinggames.com/io-games/raid-land" target="_blank" class="c1" id="ac14"><span class="s1">RaidLand(onlyPC)</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/23597" target="_blank" class="c1" id="ac15"><span class="s1">ImpossibleRise</span></a>
+            <a href="https://games.softgames.com/games/fly-with-rope-2/gamesites/10103/" target="_blank" class="c1" id="ac16"><span class="s1">FlyingRope</span></a>
+            <a href="https://games.softgames.com/games/viking-king/gamesites/10103/" target="_blank" class="c1" id="ac17"><span class="s1">VikingKing</span></a>
+            <a href="https://games.softgames.com/games/kings-return/gamesites/10103/" target="_blank" class="c1" id="ac18"><span class="s1">King’sReturn</span></a>
+            <!-- <a href="" class="c1" id="ac19" target="_blank"><span class="s1"></span></a> -->
+            
+        </section>
+    </div>
+    <div id="girls">
+        <h2 class="b1">Girls Games</h2>
+        <section class="item">
+            <a href="https://play.famobi.com/baby-lily-birthday/A-CIYPT" target="_blank" class="c1" id="d1"><span class="s1">BabyLilyBirthday</span></a>
+            <a href="https://play.famobi.com/cute-unicorn-care/A-CIYPT" target="_blank" class="c1" id="d2"><span class="s1">CuteUnicornCare</span></a>
+            <a href="https://play.famobi.com/nina-airlines/A-CIYPT" target="_blank" class="c1" id="d3"><span class="s1">Nina-Airlines</span></a>
+            <a href="https://play.famobi.com/mandala-coloring-book/A-CIYPT" target="_blank" class="c1" id="d4"><span class="s1">MandalaColoringBook</span></a>
+            <a href="https://play.famobi.com/emergency-surgery/A-CIYPT" target="_blank" class="c1" id="d5"><span class="s1">EmergencySurgery</span></a>
+            <a href="https://play.famobi.com/nina-detective/A-CIYPT" target="_blank" class="c1" id="d6"><span class="s1">Nina-Detective</span></a>
+            <a href="https://play.famobi.com/pizza-realife-cooking/A-CIYPT" target="_blank" class="c1" id="d7"><span class="s1">PizzaRealifeCooking</span></a>
+            <a href="https://play.famobi.com/winter-makeup/A-CIYPT" target="_blank" class="c1" id="d8"><span class="s1">WinterMakeup</span></a>
+            <a href="https://play.famobi.com/fashionista-maldives/A-CIYPT" target="_blank" class="c1" id="d9"><span class="s1">FashionistaMaldives</span></a>
+            <a href="https://play.famobi.com/chocolate-biscuits/A-CIYPT" target="_blank" class="c1" id="d10"><span class="s1">ChocolateBiscuits</span></a>
+            <a href="https://play.famobi.com/fairy-princess/A-CIYPT" target="_blank" class="c1" id="d11"><span class="s1">FairyPrincess</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/24548" target="_blank" class="c1" id="d12"><span class="s1">MaryRun</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/24532" target="_blank" class="c1" id="d13"><span class="s1">MarbleTrap</span></a>
+            <a href="https://games.softgames.com/games/nail-salon-maries-girl-games/gamesites/10103/" target="_blank" class="c1" id="d14"><span class="s1">NailSaloon </span></a>
+            <a href="https://games.softgames.com/games/shoe-designer-maries-girl-games/gamesites/10103/" target="_blank" class="c1" id="d15"><span class="s1">ShoeDesigner </span></a>
+            <a href="https://games.softgames.com/games/candy-slide/gamesites/10103/" target="_blank" class="c1" id="d16"><span class="s1">CandyCrusher </span></a>
+            <a href="https://games.softgames.com/games/master-tournament/gamesites/10103/" target="_blank" class="c1" id="d17"><span class="s1">8BallPools</span></a>
+            <!-- <a href="" class="c1" id="d18" target="_blank"><span class="s1"></span></a> -->
+        </section>
+    </div>
+    <div id="skills">
+        <h2 class="b1">Skill Games</h2>
+        <section class="item">
+            <a href="https://play.famobi.com/tower-crash-3d/A-CIYPT" target="_blank" class="c1" id="sk1"><span class="s1">TowerCrash3D</span></a>
+            <a href="https://play.famobi.com/archery-world-tour/A-CIYPT" target="_blank" class="c1" id="sk2"><span class="s1">ArcheryWorldTour</span></a>
+            <a href="https://play.famobi.com/slam-dunk-basketball/A-CIYPT" target="_blank" class="c1" id="sk3"><span class="s1">SlamDunkBasketball</span></a>
+            <a href="https://play.famobi.com/pick-a-lock/A-CIYPT" target="_blank" class="c1" id="sk4"><span class="s1">PickALock</span></a>
+            <a href="https://play.famobi.com/classic-bowling/A-CIYPT" target="_blank" class="c1" id="sk5"><span class="s1">ClassicBowling</span></a>
+            <a href="https://play.famobi.com/goalkeeper-challenge/A-CIYPT" target="_blank" class="c1" id="sk6"><span class="s1">GoalkeeperChallenge</span></a>
+            <a href="https://play.famobi.com/arcade-golf-neon/A-CIYPT" target="_blank" class="c1" id="sk7"><span class="s1">ArcadeGolf:NEON</span></a>
+            <a href="https://play.famobi.com/100-golf-balls/A-CIYPT" target="_blank" class="c1" id="sk8"><span class="s1">100GolfBalls</span></a>
+            <a href="https://play.famobi.com/baseball-pro/A-CIYPT" target="_blank" class="c1" id="sk9"><span class="s1">BaseballPro</span></a>
+            <a href="https://play.famobi.com/3d-penalty/A-CIYPT" target="_blank" class="c1" id="sk10"><span class="s1">3DPenalty</span></a>
+            <a href="https://play.famobi.com/bottle-flip-challenge/A-CIYPT" target="_blank" class="c1" id="sk11"><span class="s1">BottleFlipChallenge</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/19720" target="_blank" class="c1" id="sk12"><span class="s1">BallInTheHole</span></a>
+            <a href="https://www.addictinggames.com/embed/html5-games/24530" target="_blank" class="c1" id="sk13"><span class="s1">BlockCrusher </span></a>
+            <a href="https://games.softgames.com/games/apothecarium/gamesites/10103/" target="_blank" class="c1" id="sk14"><span class="s1">Apothecarium</span></a>
+            <a href="https://games.softgames.com/games/down-the-hill/gamesites/10103/" target="_blank" class="c1" id="sk15"><span class="s1">DownTheHill</span></a>
+            <a href="https://games.softgames.com/games/hamster-go-home/gamesites/10103/" target="_blank" class="c1" id="sk16"><span class="s1">HamsterGoHome</span></a>
+            <a href="https://games.softgames.com/games/touch-and-catch-winter-fun/gamesites/10103/" target="_blank" class="c1" id="sk17"><span class="s1">Touch&Catch</span></a>
+            <a href="https://games.softgames.com/games/circle-circus/gamesites/10103/" target="_blank" class="c1" id="sk18"><span class="s1">CircleCircus </span></a>
+            <!-- <a href="" class="c1" id="sk19" target="_blank"><span class="s1"></span></a> -->
+           
+        </section>
+    </div>
+</div>
+</div>
+<script>
+    const box1=document.getElementById('box1');
+        const box2=document.getElementById('box2');
+        const box3=document.getElementById('box3');
+        const racing=document.getElementById('racing');
+        const board=document.getElementById('board');
+        const action=document.getElementById('action');
+        const girls=document.getElementById('girls');
+        const skills=document.getElementById('skills');
+        const subroom=document.getElementById('subroom')
+        function toggle100hide(){
+        
+        if(subroom.style.display=='none'){
+        box1.style.display='none';
+        box2.style.display='none';
+        racing.style.display='none';
+        board.style.display='none';
+        girls.style.display='none';
+        action.style.display='none';
+        skills.style.display='none';
+        box3.style.display='none';
+        subroom.style.display='flex';
+        subroom.style.backgroundColor='transparent';
+        }
+        else{
+            box1.style.display ='block';
+            box2.style.display ='block';
+            box3.style.display='block';
+            subroom.style.display ='none';
+        }
+    }
+    function togglehide(){
+        
+        if(racing.style.display=='none'){
+        box1.style.display='none';
+        box2.style.display='none';
+        racing.style.display='block';
+        board.style.display='none';
+        girls.style.display='none';
+        box3.style.display='none';
+        action.style.display='none';
+        skills.style.display='none';
+        if(subroom.style.display=='flex'){
+            subroom.style.display='none';
+          }
+        }
+        else{
+            box1.style.display ='block';
+            box2.style.display ='block';
+            box3.style.display='block';
+            racing.style.display ='none';
+        }
+    }
+    function togglehide1(){
+        
+        if(board.style.display=='none'){
+        box1.style.display='none';
+        box2.style.display='none';
+        racing.style.display='none';
+        board.style.display='block';
+        girls.style.display='none';
+        action.style.display='none';
+        box3.style.display='none';
+        skills.style.display='none';
+        if(subroom.style.display=='flex'){
+            subroom.style.display='none';
+          }
+        }
+        else{
+            box1.style.display ='block';
+            box2.style.display ='block';
+            box3.style.display='block';
+            board.style.display ='none';
+        }
+    }
+    function togglehide2(){
+        
+        if(action.style.display=='none'){
+        box1.style.display='none';
+        box2.style.display='none';
+        racing.style.display='none';
+        board.style.display='none';
+        girls.style.display='none';
+        box3.style.display='none';
+        action.style.display='block';
+        skills.style.display='none';
+        if(subroom.style.display=='flex'){
+            subroom.style.display='none';
+          }
+        }
+        else{
+            box1.style.display ='block';
+            box2.style.display ='block';
+            box3.style.display='block';
+            action.style.display ='none';
+        }
+    }
+    function togglehide3(){
+        
+        if(girls.style.display=='none'){
+        box1.style.display='none';
+        box2.style.display='none';
+        racing.style.display='none';
+        board.style.display='none';
+        girls.style.display='block';
+        box3.style.display='none';
+        action.style.display='none';
+        skills.style.display='none';
+        if(subroom.style.display=='flex'){
+            subroom.style.display='none';
+          }
+        }
+        else{
+            box1.style.display ='block';
+            box2.style.display ='block';
+            box3.style.display='block';
+            girls.style.display ='none';
+        }
+    }
+    function togglehide4(){
+        
+        if(skills.style.display=='none'){
+        box1.style.display='none';
+        box2.style.display='none';
+        racing.style.display='none';
+        board.style.display='none';
+        girls.style.display='none';
+        box3.style.display='none';
+        action.style.display='none';
+        skills.style.display='block';
+        if(subroom.style.display=='flex'){
+            subroom.style.display='none';
+          }
+        }
+        else{
+            box1.style.display ='block';
+            box2.style.display ='block';
+            box3.style.display='block';
+            skills.style.display ='none';
+        }
+    }
+    function togglehide5(){
+        
+        box1.style.display='block';
+        box2.style.display='block';
+        racing.style.display='none';
+        board.style.display='none';
+        girls.style.display='none';
+        box3.style.display='block';
+        action.style.display='none';
+        skills.style.display='none';
+        if(subroom.style.display=='flex'){
+            subroom.style.display='none';
+          }
+       
+       
+    }
+     
+     
+   
+       
+</script>
+</body>
+</html>
