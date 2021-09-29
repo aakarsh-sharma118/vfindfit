@@ -1,0 +1,1700 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+	<meta charset="utf-8">
+	<link rel="shartcut icon" type="image/x-icon" href="./images/vFindfit.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	
+	<!--bootstrap-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!--font-->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+	
+ <!--fontawseom-->
+ <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+ <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+
+ <!--fontawseom-->
+ <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+ <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+	></script>
+	
+	 <!-- Nav and Loader -->
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+
+    <title>vFindfit - Categories</title>
+    <link rel="stylesheet" href="./css/cat.css">
+	 
+	   <!--push-->
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "f783a437-5b9e-402d-8907-8c24eb5f7c4b",
+    });
+  });
+</script>
+    
+   <!--end push-->
+	</head>
+	 <style>
+		 .front{
+           Bottom:0px;
+Display: flex;
+align-item:flex-end;
+Justify-content: center;
+Margin-bottom:0px;
+Top:92%;
+Height:11%;
+Background:#fff;
+Padding-top: 8px;
+}
+.front span{
+Font-size: 18px;
+Color: #ff9933;
+}
+.front p{
+Font-size:18px;
+Margin-bottom: 0px;
+}
+		 .b{
+			 display: none;
+		 }
+		 
+		 @media(max-width: 600px){
+
+			  .a{
+            display: none;
+					}
+					
+               .a1{
+                display: none;
+			  }
+			  
+              .b{
+                display: block;
+			  }
+
+       .row .text-center #filter-list{
+		   padding-top: 5%;
+		   width: 105%;
+		   box-shadow: none;
+		   text-decoration: none!important;
+		   margin-top: 10px;
+           margin: 0px;
+           border: none;
+           border-radius: 0px;
+           height: 100px;
+           background-color: transparent;
+		 }
+		 
+         .navbar{
+            Height:85px;
+            Justify-content: space-around;
+            Padding: 10px 0;
+
+		 }
+		 
+         .text-center{
+             /* display: flex; */
+            /* box-shadow: 10px 12px 10px black; */
+            /* background-color: blanchedalmond; */
+             overflow: hidden;
+		 }
+		 
+         .logo{
+            display: block;
+            height:revert;
+            Position: relative;
+            Top: 20px;
+            Left: 20px;
+       Text-align: center;
+            width: 350px;
+            background-color: transparent;
+            /* border-right: 2px solid black; */
+		 }
+		 
+         .inner-width{
+            Padding: unset;
+            Margin: 0px;
+            Width: 100%;
+		 }
+		 
+         .logo span{
+             font-size: 30px;
+             font-weight: bold;
+     Color: #ff9933;
+         }
+       
+         #filter-list a{
+			 display: flex;
+			 text-decoration: none!important;
+             align-items: center;
+             justify-content: center;
+		 }
+
+		 #filter-list li i{
+			 font-size: x-large;
+		 }
+
+		 #filter-list li {
+			 line-break: strict;
+             display: inline-block;
+             font-size: 23px;
+	         text-transform: uppercase;
+	         text-decoration: none!important;
+             color: white;
+              text-align: center;
+             border-radius: 25px;
+             font-weight: 700;
+             padding: 0 16px;
+             min-width: 127px;
+             line-height: normal;
+
+		 }
+.row{
+      Padding-top:10%
+}
+		 
+         #filter-list li:hover{
+             color: #ff9933;
+           
+			 }
+			 
+          .navbar .logo img{
+             max-height: 79px;
+             min-height: 57px;
+		 }	  
+}
+              		 
+	 </style>
+	<body>
+
+		<div class="loader-container">
+			<div class="obj"></div>
+			  <div class="obj"></div>
+			  <div class="obj"></div>
+			  <div class="obj"></div>
+			  <div class="obj"></div>
+			  <div class="obj"></div>
+			  <div class="obj"></div>
+			  <div class="obj"></div>
+		</div>
+	  
+		 <!-- Navbar -->
+		 <nav class="navbar">
+			<div class="inner-width">
+				<a  class="logo b"><img src="./images/logo-w (1).png" alt="" style="width: 80px; height: 50px;"><br><span style="color:#ff9933">Web Market</span></a>
+			  <button class="menu-toggler">
+				<span></span>
+				<span></span>
+				<span></span>
+			  </button>
+			 
+			  <div class="navbar-menu">
+				<a href="index.html">Home</a>
+				<a href="index.html#about">About Us</a>
+				<a href="index.html#contact">Contact Us</a>
+			  </div>
+			</div>
+		  </nav>
+		  <div class="row b">
+			<div class="col-md-12 text-center b">
+				<ul id="filter-list">
+				<a  href="./Categories/Movies.html"><li class="filter"><i class="fa fa-video-camera"></i> &nbsp; Movies</li></a>
+				<a  href="./Categories/Developer.html"><li class="filter"><i class="fa fa-code"></i> &nbsp; Developer</li></a>
+				<a  href="./Categories/Technology.html"><li class="filter"><i class="fa fa-laptop"></i> &nbsp; Technology</li></a>
+				<a  href="./Categories/Education.html"><li class="filter" ><i class="fa fa-book "></i> &nbsp; Education</li></a>
+				<a  href="./Categories/Fashion.html"><li class="filter" ><i class="fa fa-shopping-bag"></i> &nbsp; Fashion</li></a>
+				<a  href="./Categories/Music.html"><li class="filter" ><i class="fa fa-music"></i> &nbsp; Music</li></a>
+				<a  href="./Categories/Social Media.html"><li class="filter" ><i class="fa fa-instagram"></i> &nbsp; Social</li></a>
+				<a  href="./Categories/News.html"><li class="filter" ><i class="fa fa-newspaper-o"></i> &nbsp; News</li></a>
+				<a  href="./Categories/Food.html"><li class="filter" ><i class="fa fa-coffee"></i> Food</li></a>
+				<a  href="./Categories/Health.html"><li class="filter" ><i class="fa fa-heart"></i> &nbsp; Health</li></a>
+				<a  href="./Categories/Agriculture.html"><li class="filter" ><i class="fa fa-pagelines"></i> &nbsp; Agriculture</li></a>
+				</ul>
+			</div>
+		</div>
+		  <h1 class="a"> &nbsp; Web Market</h1>
+
+		<div class="row a1">
+			<div class="col-md-12 text-center">
+				<ul id="filter-list">
+					<a  href="./Categories/Movies.html"><li class="filter"><i class="fa fa-video-camera"></i> &nbsp; Movies</li></a>
+				<a  href="./Categories/Developer.html"><li class="filter"><i class="fa fa-code"></i> &nbsp; Developer</li></a>
+				<a  href="./Categories/Technology.html"><li class="filter"><i class="fa fa-laptop"></i> &nbsp; Technology</li></a>
+				<a  href="./Categories/Education.html"><li class="filter" ><i class="fa fa-book "></i> &nbsp; Education</li></a>
+				<a  href="./Categories/Fashion.html"><li class="filter" ><i class="fa fa-shopping-bag"></i> &nbsp; Fashion</li></a>
+				<a  href="./Categories/Music.html"><li class="filter" ><i class="fa fa-music"></i> &nbsp; Music</li></a>
+				<a  href="./Categories/Social Media.html"><li class="filter" ><i class="fa fa-instagram"></i> &nbsp; Social</li></a>
+				<a  href="./Categories/News.html"><li class="filter" ><i class="fa fa-newspaper-o"></i> &nbsp; News</li></a>
+				<a  href="./Categories/Food.html"><li class="filter" ><i class="fa fa-coffee"></i> Food</li></a>
+				<a  href="./Categories/Health.html"><li class="filter" ><i class="fa fa-heart"></i> &nbsp; Health</li></a>
+				<a  href="./Categories/Agriculture.html"><li class="filter" ><i class="fa fa-pagelines"></i> &nbsp; Agriculture</li></a>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+
+	<!-- <div class="side">
+		<a href="https://www.instagram.com/vfindfit/" style="background: #C13584;">Instagram </a>
+		<a href="mailto:vfindfit@gmail.com" style="background: #c0392b;">G-mail </a>
+		<a href="https://www.facebook.com/vfind.fit.1" style="background: #2c3e50;">Facebook </a>
+		<a href="https://twitter.com/vFindfit" style="background: #2980b9;">Twitter </a>
+	  </div> -->
+
+<div class="main">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Movies</h3>
+			</div>
+
+			<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTYyg2Xd4PmlBnEeaVVsI8B5EVhVgN7pwJD9Q&usqp=CAU);">
+				<div class="contents front">
+				<p>Amazon Prime</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Amazon Prime</h2>
+				<span> <p> An American Internet video on demand service that is developed, owned, and operated by Amazon.
+				<br>Serivce Type: Paid 
+					<br>Launched: Sept 7, 2006 
+				<br>Parent Organisation: Amazon
+				<br>Owner: Amazon Inc.</p></span>
+				<div class="icons">
+					<a href="https://www.primevideo.com/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSR9t4vIB8h3InICUkVMgkaXQ8CQiwibjpVNQ&usqp=CAU);">
+				<div class="contents front">
+				<p>AfdahMovie</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>AfdahMovie</h2>
+				<span> <p> Afdah is a web scraper coded to crawl and index online movie sites. Afdah do not host or upload any videos or movies other than indexing them. Sometimes it may not work properly due to privacy issue .
+				<br>Serivce Type: Free 
+					<br>Launched: N/A
+				<br>Parent Organisation: N/A
+				<br>Owner: Afdah </p></span>
+				<div class="icons">
+					<a href="https://afdah.info/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTusf-auhCvLOXyEodh_6_LFw_uoih7WYza8g&usqp=CAU);">
+				<div class="contents front">
+				<p>AZMovies</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>AZMovies</h2>
+				<span> <p> AZ Movies is a movies piracy site , it allows to download latest Bollywood, Hollywood Movies
+				<br>Serivce Type: free 
+					<br>Launched: N/A
+				<br>Parent Organisation: N/A
+				<br>Owner: Az Movies </p></span>
+				<div class="icons">
+					<a href="https://azm.to/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://i.pinimg.com/originals/bc/0c/a7/bc0ca7e9a35a6f68ed90fa3410033614.jpg);">
+				<div class="contents front">
+				<p>Avi Movies</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Avi Movies</h2>
+				<span> <p> Free Download Latest Mobile Movies Bollywood, Hollywood Hindi Dubbed, South Hindi Dubbed, WWE etc in HD AVI format.
+				<br>Serivce Type: Free
+					<br>Launched: N/A
+				<br>Parent Organisation: N/A
+				<br>Owner: Avi Movies</p></span>
+				<div class="icons">
+					<a href="https://avimobilemovies.net/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://i1.wp.com/www.stepwisetech.com/wp-content/uploads/2020/06/download-movie-from-afilmywap-1.jpg?fit=750%2C400&ssl=1);">
+				<div class="contents front">
+				<p>AFilmywap</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>AFilmywap</h2>
+				<span> <p> AFilmywap is a popular site that uploads Bollywood movies.  Filmywap's online website has a wide selection of Hollywood films, as well as regional Indian films such as Tamil, Telugu, Marathi, Punjabi, and Malayalam.
+				<br>Serivce Type: Free 
+					<br>Launched: N/A
+				<br>Parent Organisation: N/A
+				<br>Owner: aFilmywap</p></span>
+				<div class="icons">
+					<a href="https://www.afilmywap.run/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://3.bp.blogspot.com/-Iu_5dTY_tOU/XGzgcmk-TgI/AAAAAAAAAYs/85Sl_9_p0FkcVQDY-p8_NpcriRz-E5azACK4BGAYYCw/s1600/watch-bollyflix-logo.png);">
+				<div class="contents front">
+				<p>Bollyflix</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Bollyflix</h2>
+				<span> <p> Bollyflix is a website to acquire Hindi Movies HD,Bollywood Movies, It wouldn’t add or stream movies to its server. They use a third event server so as to add films. It is because of they don’t use their server that the loading velocity of the website is pretty fast. 
+				<br>Serivce Type: Free 
+					<br>Launched: N/A
+				<br>Parent Organisation: N/A
+				<br>Owner: Bollyfix</p></span>
+				<div class="icons">
+					<a href="https://bollyflix.me/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/05beff3d902d3020b0391c0e201c6b15-1547446922302/fd3f8733-ef32-4222-bcf7-7bec9031db54.png);">
+				<div class="contents front">
+				<p>Bolly4u</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Bolly4u</h2>
+				<span> <p> It has a global alexa rank of #99,999,999 in the world. This site has 532 monthly visits and it has 34 daily traffic on based of alexa. 
+				<br>Serivce Type: Free
+					<br>Launched: 2020-08-16
+				<br>Parent Organisation: WhoisGuard Protected (WhoisGuard, Inc.)
+				<br>Owner: CloudFlare, Inc.</p></span>
+				<div class="icons">
+					<a href="https://bolly4u1.com/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRiREXyiMNmTSSm6jgJjGz6IpW63TB5fyPFUQ&usqp=CAU);">
+				<div class="contents front">
+				<p>Classic Cinema</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Classic Cinema</h2>
+				<span> <p> Classic Cinemas is a family-owned business based in Downers Grove, Illinois since 1978.
+				<br>Serivce Type: free
+					<br>Launched: N/A
+				<br>Parent Organisation: Willis, Shirley and Chris Johnson
+				<br>Owner: Classic cinema</p></span>
+				<div class="icons">
+					<a href="https://www.classiccinemas.com/f/tenet/779600" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTTnYfRTYFQ2Ws9nU1bMI0MfSBhV39YfBsLSw&usqp=CAU);">
+				<div class="contents front">
+				<p>CrunchyRoll</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>CrunchyRoll</h2>
+				<span> <p> Crunchyroll, Inc. is an American distributor, publisher, and licensing company focused on streaming anime, manga, and dorama.
+				<br>Serivce Type: Paid
+					<br>Launched: May 14, 2006
+				<br>Parent Organisation: N/a
+				<br>Owner: N/A</p></span>
+				<div class="icons">
+					<a href="https://www.crunchyroll.com/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://t4.ftcdn.net/jpg/03/20/46/59/240_F_320465973_1dU9j03GCdhqFK1nL7XI0qsrIcLqQcoI.jpg);">
+				<div class="contents front">
+				<p>Critic Bay</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Critic Bay</h2>
+				<span> <p> Critic Bay is a Ghanaian music based website that aims to support artists and also give viewers something to read.
+				<br>Serivce Type: Free
+					<br>Launched: N/A
+				<br>Parent Organisation: N/A
+				<br>Owner: N/A</p></span>
+				<div class="icons">
+					<a href="https://www.criticbay.com/category/movies/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://reviewvpn.com/wp-content/uploads/2020/06/a8255964f71797a25bb993f810cfc407.png);">
+				<div class="contents front">
+				<p>Cinebloom</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Cinebloom</h2>
+				<span> <p> Watch free the newest movie stream indexed as they appear online, in HD high quality. The website hosts many Hollywood movies and TV series illegally. 
+				<br>Serivce Type: Free
+					<br>Launched: N/A
+				<br>Parent Organisation: N/A
+				<br>Owner: N/A</p></span>
+				<div class="icons">
+					<a href="https://www.cinebloom.org/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT5nGlIpoIZUsOOlc-x1JfHtjOVS9SqraqsZKL4WgykGw&usqp=CAU&ec=45695923);">
+				<div class="contents front">
+				<p>Download  HUB</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Download  HUB</h2>
+				<span> <p> Downloadhub is a pirated website that provides a free download of HD quality movies within 300MB.
+				<br>Serivce Type: Free
+					<br>Launched: 26-January-2020
+				<br>Parent Organisation: N/A
+				<br>Owner: N/A</p></span>
+				<div class="icons">
+					<a href="https://downloadhub.host/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRn-jI67dRSct0_bs2Z6489dp5hFSqWkYMzRw&usqp=CAU);">
+				<div class="contents front">
+				<p>FilmAffinity</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>FilmAffinity</h2>
+				<span> <p> FilmAffinity is a movie recommendations website created in 2002 in Madrid, Spain by the film critic Pablo Kurt Verdú Schumann and the programmer Daniel Nicolás. 
+				<br>Serivce Type: Paid
+					<br>Launched: 2002
+				<br>Parent Organisation: Pablo Kurt Verdú Schumann and Daniel Nicolás
+				<br>Owner: Filmaffinity</p></span>
+				<div class="icons">
+					<a href="https://www.filmaffinity.com/us/main.html" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3qRH502LP-xgsXZAYETgCxbzQFA1wRiX9gw&usqp=CAU);">
+				<div class="contents front">
+				<p>FilmNow</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>FilmNow</h2>
+				<span> <p> filme bune, program tv, seriale bune, film now, filme 2020, Filme 2019
+				<br>Serivce Type: Paid
+					<br>Launched: 2018-04-04
+				<br>Parent Organisation: N/A
+				<br>Owner: RCS & RDS Business</p></span>
+				<div class="icons">
+					<a href="https://www.filmnow.ro/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://troypoint.com/wp-content/uploads/2020/04/free-online-movie-streaming-sites-flixtor-1.png);">
+				<div class="contents front">
+				<p>Flixtor</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Flixtor</h2>
+				<span> <p> Flixtor is a streaming platform designed to give you the best in entertainment. Unlike many other online streaming websites, Flixtor is a video search engine that scours the internet for video streaming links to serve its users.
+				<br>Serivce Type: Free
+					<br>Launched: 15th June of 2014
+				<br>Parent Organisation: N/A
+				<br>Owner: Flictor</p></span>
+				<div class="icons">
+					<a href="https://flixtor.to/home" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS7QJ6aIYAVj3vKylomFYQqk2IaNCt20zMd3Q&usqp=CAU);">
+				<div class="contents front">
+				<p>Fully Watch Online</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Fully Watch Online</h2>
+				<span> <p> Latest Hollywood New Full Movies Watch Online and Full Movies Free Download Here. 
+				<br>Serivce Type: Free
+					<br>Launched: 2014-11-22
+				<br>Parent Organisation: WhoisGuard Protected (WhoisGuard, Inc.)
+				<br>Owner: CloudFlare, Inc.</p></span>
+				<div class="icons">
+					<a href="https://fullywatchonline.com/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQt6y99jY8PkD5GYJa748apEJrJjRDWXr1Mdw&usqp=CAU);">
+				<div class="contents front">
+				<p>FZ Movies</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>FZ Movies</h2>
+				<span> <p> Fzmovies is an Indian torrent website which allows users to download movies online illegally.
+				<br>Serivce Type: Free
+					<br>Launched: 15th of December 2012
+				<br>Parent Organisation: mobileTvseries.com.
+				<br>Owner: Fzmovies</p></span>
+				<div class="icons">
+					<a href="https://fzmovies.net/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS57YzSWKyhiI5fgWzTwUu79EL1cADzlocyag&usqp=CAU);">
+				<div class="contents front">
+				<p>GoMovies</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>GoMovies</h2>
+				<span> <p> GoMovies is a free streaming service new website where you can watch latest 2020 full hd movies and tv-shows online for free of cost.
+				<br>Serivce Type: Free
+					<br>Launched: 2015–2016 est.
+				<br>Parent Organisation: N/A
+				<br>Owner: Gomovies</p></span>
+				<div class="icons">
+					<a href="https://gomovies123.buzz/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://t4.ftcdn.net/jpg/03/29/68/75/240_F_329687521_2MrBLl5u8UHc2tk4k9kPfQmZvlADPFrH.jpg);">
+				<div class="contents front">
+				<p>Go Stream</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Go Stream</h2>
+				<span> <p> Welcome to Gostream, You can watch movies online here. Everything is free and without ads.
+				<br>Serivce Type: Free
+					<br>Launched: 2015
+				<br>Parent Organisation: N/A
+				<br>Owner: Gostream</p></span>
+				<div class="icons">
+					<a href="https://gostream.site/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://i.pinimg.com/originals/a7/d7/42/a7d7421ae88336b991f6eb00a79a621f.jpg);">
+				<div class="contents front">
+				<p>Go Download Movies</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Go Download Movies</h2>
+				<span> <p> Download the latest free movies with no charges and with no membership. You can get all type of movies like comedy, horror, thriller and action on Full DivX DVD format. Enter and get all the movies that you need.
+				<br>Serivce Type: Free
+					<br>Launched: 2014-03-06
+				<br>Parent Organisation: N/A
+				<br>Owner: godownloadmovies.com</p></span>
+				<div class="icons">
+					<a href="https://godownloadmovies.com/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSR6wbFdp1ZmHe3nHUxT4Y6d-N5d40BQYkm2g&usqp=CAU);">
+				<div class="contents front">
+				<p>HotStar</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back" style="margin-top: 5%;">
+				<h2>HotStar</h2>
+				<span> <p> Disney+ Hotstar (known as Hotstar outside India and Indonesia) is an Indian subscription video on-demand streaming service owned and operated by Star India, a subsidiary of The Walt Disney Company India. 
+				<br>Serivce Type: Free/paid
+					<br>Launched: 11 February 2015 (as Hotstar)3 April 2020 (as Disney+ Hotstar)
+				<br>Parent Organisation: The Walt Disney Company India
+				<br>Owner: Star India</p></span>
+				<div class="icons">
+					<a href="https://www.hotstar.com/in" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSOdsk1bhpCFUwF1RFsoLnEQbuQVGGcFB6bvA&usqp=CAU);">
+				<div class="contents front">
+				<p>HBO</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>HBO</h2>
+				<span> <p> HBO—also the oldest and longest continuously operating subscription television service (basic or a la carte premium) in the United States
+				<br>Serivce Type: Free/paid
+					<br>Launched: November 8, 1972; 47 years ago
+				<br>Parent Organisation: Home Box Office, Inc.
+				<br>Owner: WarnerMedia Studios & Networks</p></span>
+				<div class="icons">
+					<a href="https://www.hbo.com/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR-5NV46pDpYwBywvX8qbW4SkvxfvbcYyPRaA&usqp=CAU);">
+				<div class="contents front">
+				<p>Hoopla</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Hoopla</h2>
+				<span> <p> Hoopla is a web and mobile library media streaming platform for audio books, comics, e-books, movies, music, and TV. patrons of librarys that support Hoopla have unlimited access to its collection of digital media.
+				<br>Serivce Type: Paid/free
+					<br>Launched: N/A
+				<br>Parent Organisation: N/A
+				<br>Owner: Midwest Tape</p></span>
+				<div class="icons">
+					<a href="https://www.hoopladigital.com/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcScRkWIokaEHwKMHJ61RXXXrOmd6tP41ljQ6g&usqp=CAU);">
+				<div class="contents front">
+				<p>IMDB</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>IMDB</h2>
+				<span> <p> IMDb is an online database, owned by Amazon, of information related to films, television programs, home videos, video games, and streaming content online
+				<br>Serivce Type: Free
+					<br>Launched: 17 October 1990
+				<br>Parent Organisation: Amazon.com
+				<br>Owner: IMDb</p></span>
+				<div class="icons">
+					<a href="https://www.imdb.com/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT5gST9FzF-As3qgEFzXLDOtqEqzLwQAIKTXQ&usqp=CAU);">
+				<div class="contents front">
+				<p>Internet Archive</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Internet Archive</h2>
+				<span> <p> It provides free public access to collections of digitized materials, including websites, software applications/games, music, movies/videos, moving images, and millions of books
+				<br>Serivce Type: Free
+					<br>Launched: May 12, 1996; 24 years ago
+				<br>Parent Organisation: Brewster Kahle
+				<br>Owner: Archives</p></span>
+				<div class="icons">
+					<a href="https://archive.org/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSeIMCzCZHr5kx8-0jO9f2zjTuzmwRqt9gcww&usqp=CAU);">
+				<div class="contents front">
+				<p>Kanopy</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Kanopy</h2>
+				<span> <p> Kanopy is an on-demand streaming video platform for public libraries and universities that offers films and documentaries.
+				<br>Serivce Type: Free 
+					<br>Launched: 25 November 2008
+				<br>Parent Organisation: Olivia Humphrey
+				<br>Owner: Privately held company</p></span>
+				<div class="icons">
+					<a href="https://www.kanopy.com/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTWWlnYZaMxiwg97GnOlVyyhPXAqxgXx28uBw&usqp=CAU);">
+				<div class="contents front">
+				<p>LookMovie</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>LookMovie</h2>
+				<span> <p> Watch Movies and TV Shows for Free in 1080p and 720p. New Movies and Episodes are added every hour.
+				<br>Serivce Type: Free
+					<br>Launched: N/A
+				<br>Parent Organisation: N/A
+				<br>Owner: N/A</p></span>
+				<div class="icons">
+					<a href="https://lookmovie.ag/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://i.pinimg.com/280x280_RS/97/34/e4/9734e41e2329e3ca10b631a155cb95dc.jpg);">
+				<div class="contents front">
+				<p>My Download Tube</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>My Download Tube</h2>
+				<span> <p> Free movie downloads & Watch online, download movies free with smallest torrents without registration on MyDownloadTube website - HD Movies Download , free movie downloads site!
+				<br>Serivce Type: Free
+					<br>Launched: 2013-06-26
+				<br>Parent Organisation: Registration Private (Domains By Proxy, LLC)
+				<br>Owner: CloudFlare, Inc.</p></span>
+				<div class="icons">
+					<a href="https://mydownloadtube.net/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT9dJCjmRQsVu08Q1DRiXytqoBfmuARqECdRw&usqp=CAU);">
+				<div class="contents front">
+				<p>Moviestar</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Moviestar</h2>
+				<span> <p> Movistar is a major telecommunications brand owned by Telefónica, operating in Spain and in many Latin American countries. 
+				<br>Serivce Type: Free
+					<br>Launched: 25 July 1995; 25 years ago
+				<br>Parent Organisation: N/A
+				<br>Owner: Telefónica</p></span>
+				<div class="icons">
+					<a href="https://moviestars.to/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://limevpncdn-ef12.kxcdn.com/wp-content/uploads/Yop-10-Movie-streaming-relevant-07.png);">
+				<div class="contents front">
+				<p>Movie No Limit</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Movie No Limit</h2>
+				<span> <p> Watch movies and TV shows online in HD on MovieNoLimit for free and without registration.
+				<br>Serivce Type: Free
+					<br>Launched: first reformed 2017
+				<br>Parent Organisation: N/A
+				<br>Owner: CloudFlare, Inc.</p></span>
+				<div class="icons">
+					<a href="https://movienolimit.to/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://reviewvpn.com/wp-content/uploads/2020/06/Moviedll-logo-300x84.png);">
+				<div class="contents front">
+				<p>Movie DLL</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Movie DLL</h2>
+				<span> <p> MovieDDL is a movie database, download movies online for free in HD quality.
+				<br>Serivce Type: Free
+					<br>Launched: N/A
+				<br>Parent Organisation: N/A
+				<br>Owner: CloudFlare, Inc.</p></span>
+				<div class="icons">
+					<a href="https://movieddl.to/recently-published-releases" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://yt3.ggpht.com/a/AGF-l793TkBMfeK3uPXzR_T663xM2pNOg_UIZb62Mg=s900-c-k-c0xffffffff-no-rj-mo);">
+				<div class="contents front">
+				<p>Moviesflix</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Moviesflix</h2>
+				<span> <p> 300mb movies, 480p movies, 720p movies, 1080p movies, dual audio movies, hindi series, hindi movies
+				<br>Serivce Type: Free
+					<br>Launched: N/A
+				<br>Parent Organisation: N/A
+				<br>Owner: moviesflixpro.in</p></span>
+				<div class="icons">
+					<a href="https://moviesflixpro.org/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://t3.ftcdn.net/jpg/02/67/86/66/240_F_267866607_9nAGVUkjfv3RkLHnSNco5LabsWlrz6Vz.jpg);">
+				<div class="contents front">
+				<p>Movie Minions</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Movie Minions</h2>
+				<span> <p> Discover movies, tv shows & anime series | MovieMinions - Discover movies, tv shows & anime series - MovieMinions
+				<br>Serivce Type: Free
+					<br>Launched: 2018-10-13
+				<br>Parent Organisation: N/A
+				<br>Owner: CloudFlare, Inc.</p></span>
+				<div class="icons">
+					<a href="https://www.movieminions.co/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://img.dtnext.in/Articles/2020/Mar/202003302016240708_MX-Player-top-entertainment-app-in-India-in-2019-Report_SECVPF.gif);">
+				<div class="contents front">
+				<p>MX Player</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>MX Player</h2>
+				<span> <p> MX Player is an Indian video streaming and video on demand platform developed by MX Media & Entertainment, It has over 280 million users globally. 
+				<br>Serivce Type: free
+					<br>Launched: As video player: 18 July 2011; As OTT: 20 February 2019
+				<br>Parent Organisation: Times Internet
+				<br>Owner: The Times Group</p></span>
+				<div class="icons">
+					<a href="https://www.mxplayer.in/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR1z_I2k1gmYd3O6v2bwRyq-j8DtojVZewC1g&usqp=CAU);">
+				<div class="contents front">
+				<p>MKVCage</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>MKVCage</h2>
+				<span> <p> Download High Quality Movies and TV Shows 480p 720p 1080p BRRip BluRay HDRip WEB-DL WEBRip DVDRip HDTV.
+				<br>Serivce Type: Free
+					<br>Launched: N/A
+				<br>Parent Organisation: N/A
+				<br>Owner: CloudFlare, Inc</p></span>
+				<div class="icons">
+					<a href="https://www.mkvcage.site/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSnbiWG56WF4TqtvoDeN2fTKsvBxWFBjW4sKQ&usqp=CAU);">
+				<div class="contents front">
+				<p>NetFlix</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>NetFlix</h2>
+				<span> <p> Netflix, Inc. is an American technology and media services provider and production company headquartered in Los Gatos, California.
+				<br>Serivce Type: Paid
+					<br>Launched: 29 August 1997
+				<br>Parent Organisation: Reed Hastings
+				<br>Owner: OTT platform</p></span>
+				<div class="icons">
+					<a href="https://www.netflix.com/in/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRQ2up43O-dMeV8GQX3YPD12t-dPidiAFySrA&usqp=CAU);">
+				<div class="contents front">
+				<p>PopCorn</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>PopCorn</h2>
+				<span> <p> Popcornflix LLC is a website and over-the-top service offering free ad-supported streaming video of feature-length movies and webisodes.
+				<br>Serivce Type: Free
+					<br>Launched: March 2011
+				<br>Parent Organisation: N/A
+				<br>Owner: Screen Media Ventures, LLC</p></span>
+				<div class="icons">
+					<a href="https://www.popcornflix.com/pages/discover/d/movies" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRW1Rn9Om9bWFJB5iSOBnRNoPCGFM3DIQmIAQ&usqp=CAU);">
+				<div class="contents front">
+				<p>Plex</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Plex</h2>
+				<span> <p> Plex is a client–server media player system plus an ancillary software suite. The Plex Media Server desktop application runs on Windows, macOS, and Linux. 
+				<br>Serivce Type: Free
+					<br>Launched: 2008; 12 years ago
+				<br>Parent Organisation: N/A
+				<br>Owner: Plex, Inc</p></span>
+				<div class="icons">
+					<a href="https://www.plex.tv/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSvQVSZrKVAfz1CYWeZeohbAw0OWcNVcH6e7A&usqp=CAU);">
+				<div class="contents front">
+				<p>PlutoTV</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>PlutoTV</h2>
+				<span> <p> Pluto TV is an American internet television service owned by ViacomCBS. 
+				<br>Serivce Type: Paid/ Free
+					<br>Launched: 1 August 2013
+				<br>Parent Organisation: Tom Ryan, Ilya Pozin and Nick Grouf 
+				<br>Owner: ViacomCBS</p></span>
+				<div class="icons">
+					<a href="https://corporate.pluto.tv/thanks-for-watching/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://www.fresherslive.com/assets-images/news/340x191/2020/07/16/retrovision-watch-movies-online-for-free-retrovision-updates-and-news.jpg);">
+				<div class="contents front">
+				<p>RetrovisionTV</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>RetrovisionTV</h2>
+				<span> <p> Retrovision TV · Classic Movies and TV · Proud and the Damned, The ( 1972) · Man In The Attic (1953) ·
+				<br>Serivce Type: Free
+					<br>Launched: N/A
+				<br>Parent Organisation: N/A
+				<br>Owner: N/A</p></span>
+				<div class="icons">
+					<a href="https://retrovision.tv/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTtUBdaFaXc7tcpSvvkj1cObwQIkWRCZUB0BA&usqp=CAU);">
+				<div class="contents front">
+				<p>SonyCrackle</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>SonyCrackle</h2>
+				<span> <p> On Crackle, watch Hollywood movies for free- uncut and unedited. From your favorite genres like Action, Horror, Sci-Fi, Crime and Comedy.
+				<br>Serivce Type: Paid/free
+					<br>Launched: May 4, 2007; 13 years ago
+				<br>Parent Organisation: Chicken Soup for the Soul Entertainment(majority) Sony Pictures Television(minority)
+				<br>Owner: Josh Felser, Dave Samuel, Mike Sitrin, and Aviv Eyal</p></span>
+				<div class="icons">
+					<a href="https://www.crackle.com/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://images.youracclaim.com/images/2bb11688-0a98-45ca-b028-02cc6d756d00/blob.jpeg);">
+				<div class="contents front">
+				<p>Solar Movies</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Solar Movies</h2>
+				<span> <p> SolarMovie is one of the most popular websites for watching free movies online.
+				<br>Serivce Type: Free
+					<br>Launched: N/A
+				<br>Parent Organisation: N/A
+				<br>Owner: N/A</p></span>
+				<div class="icons">
+					<a href="https://www1.solarmovies.co/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT7LsLuxgZ3HuxoGKd5G2CKdN8xevaL5kt7Og&usqp=CAU);">
+				<div class="contents front">
+				<p>Sony Liv</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Sony Liv</h2>
+				<span> <p> SonyLIV is a South Asian general entertainment, video on demand service available in India and Pakistan.
+				<br>Serivce Type: Free/paid
+					<br>Launched: 22 January 2013; 7 years ago
+				<br>Parent Organisation: Sony Pictures Networks India
+				<br>Owner: Sony Pictures Networks India Pvt. Ltd.</p></span>
+				<div class="icons">
+					<a href="https://www.sonyliv.com/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQJoLfLO0vS9bIyDxB549RYq13D4HPJH2V7pw&usqp=CAU);">
+				<div class="contents front">
+				<p>TopDocu Film</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>TopDocu Film</h2>
+				<span> <p> Persian Legacy of the Flames · How Doggerland Sank Beneath the Waves · Spy Merchants · Heimo's Arctic Refuge.
+				<br>Serivce Type: Paid/Free
+					<br>Launched: N/A
+				<br>Parent Organisation: N/A
+				<br>Owner: N/A</p></span>
+				<div class="icons">
+					<a href="https://topdocumentaryfilms.com/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcShFrNERWmOIWuA0jwJ-_EuD98A8E5vYfZY2g&usqp=CAU);">
+				<div class="contents front">
+				<p>TUBI</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>TUBI</h2>
+				<span> <p> Watch free movies and TV shows online in HD on any device. Tubi - streaming movies and TV free
+				<br>Serivce Type: Free
+					<br>Launched: 1 April 2014
+				<br>Parent Organisation: Farhad Massoudi,Thomas Ahn Hicks
+				<br>Owner: Fox Corporation</p></span>
+				<div class="icons">
+					<a href="https://tubitv.com/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://image.pitchbook.com/lYxp6b49wUHMacvD91F7VjKnBUV1591328440756_200x200);">
+				<div class="contents front">
+				<p>TVFPlay</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>TVFPlay</h2>
+				<span> <p> Watch free movies and TV shows online in HD on any device. Tvf - streaming movies and TV free
+				<br>Serivce Type: free
+					<br>Launched: N/A
+				<br>Parent Organisation: N/A
+				<br>Owner: tvfplay</p></span>
+				<div class="icons">
+					<a href="https://tvfplay.com/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcREwuGSQUytmcRyArjLTZq46dJxuTKeIovK4w&usqp=CAU);">
+				<div class="contents front">
+				<p>VUDU</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>VUDU</h2>
+				<span> <p> Rent, buy, and watch movies and TV shows with Vudu. Watch online or on your favorite connected device
+				<br>Serivce Type: Paid
+					<br>Launched: 1 January 2004
+				<br>Parent Organisation: Alain Rossmann,Tony S. Miranz
+				<br>Owner: Fandango</p></span>
+				<div class="icons">
+					<a href="https://www.vudu.com/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://i.pinimg.com/originals/7d/6e/76/7d6e76927c7bdd1fbfb87528da4f7781.png);">
+				<div class="contents front">
+				<p>Vimeo</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Vimeo</h2>
+				<span> <p> Vimeo is an American video hosting, sharing, and services platform headquartered in New York City
+				<br>Serivce Type: Free/paid
+					<br>Launched: November 2004
+				<br>Parent Organisation: Zach Klein,Jake Lodwick
+				<br>Owner: IAC</p></span>
+				<div class="icons">
+					<a href="https://vimeo.com/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://vdcdn-technokraze.netdna-ssl.com/wp-content/uploads/2018/08/voot-logo.jpg);">
+				<div class="contents front">
+				<p>Voot</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Voot</h2>
+				<span> <p> Voot is an Indian subscription video on demand service.
+				<br>Serivce Type: Free/paid
+					<br>Launched: March 2016
+				<br>Parent Organisation: N/A
+				<br>Owner: Viacom 18</p></span>
+				<div class="icons">
+					<a href="https://www.voot.com/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRzBLERwcf-7Cnwb4TTSL5cHSbECY8a9-7Hxg&usqp=CAU);">
+				<div class="contents front">
+				<p>WayBack Machine</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>WayBack Machine</h2>
+				<span> <p> The Wayback Machine is a digital archive of the World Wide Web, founded by the Internet Archive, a nonprofit library based in San Francisco.
+				<br>Serivce Type: Free
+					<br>Launched: 24 October 2001
+				<br>Parent Organisation: Brewster Kahle
+				<br>Owner: Internet Archive</p></span>
+				<div class="icons">
+					<a href="https://web.archive.org/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRA1KRkfld8dJme90GoC1HMWgZvQfksQ-qHiw&usqp=CAU);">
+				<div class="contents front">
+				<p>YesMovie</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>YesMovie</h2>
+				<span> <p> Watch movies full HD online free Yesmovies. Watch latests episode series online Yesmovies .to. Over 50.000 free streaming movies
+				<br>Serivce Type: Free
+					<br>Launched: N/A
+				<br>Parent Organisation: N/A
+				<br>Owner: Yesmovies</p></span>
+				<div class="icons">
+					<a href="https://yesmovies.mom/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQZo4zHY0xKipxwUSy5gMY00IZdMWvqJ1i4cA&usqp=CAU);">
+				<div class="contents front">
+				<p>Yidio</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>Yidio</h2>
+				<span> <p> Yidio is universal search & discovery for any TV Show & Movie across Netflix, Hulu, Amazon, and hundreds of other providers in one place.
+				<br>Serivce Type: Free
+					<br>Launched: January 2008
+				<br>Parent Organisation: Adam Eatros,Brandon Eatros
+				<br>Owner: Video aggregation</p></span>
+				<div class="icons">
+					<a href="https://www.yidio.com/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/18/YTS_logo.png);">
+				<div class="contents front">
+				<p>YTS</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>YTS</h2>
+				<span> <p> The official YTS YIFY Movies Torrents website. Download free yify movies torrents in 720p, 1080p and 3D quality. 
+				<br>Serivce Type: Free
+					<br>Launched: August 2011
+				<br>Parent Organisation: Yiftach Swery
+				<br>Owner: N/A</p></span>
+				<div class="icons">
+					<a href="https://yts.mx/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://i1.wp.com/beingsofuniverse.com/wp-content/uploads/2020/04/yes-hollywood-logo.jpg?resize=213%2C213&ssl=1);">
+				<div class="contents front">
+				<p>YesHollywood</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>YesHollywood</h2>
+				<span> <p> If You are Searching for Best site to download free latest Hollywood dubbed movies in English and Hindi in HD Quality. 
+				<br>Serivce Type: Free
+					<br>Launched: 2019-03-03
+				<br>Parent Organisation: Whois Agent (Domain Protection Services, Inc.)
+				<br>Owner: CloudFlare, Inc.</p></span>
+				<div class="icons">
+					<a href="https://yeshollywood.co/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://www.saashub.com/images/app/service_logos/147/uv5p4ied14yw/large.png?1589383946);">
+				<div class="contents front">
+				<p>123Movies Go</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>123Movies Go</h2>
+				<span> <p> 123Movies Official Website ?? Search your favorite Movies now ?? Get the newest Movies in 2020 with our free to use 123Movies
+				<br>Serivce Type: Free
+					<br>Launched: est. 2015–2016
+				<br>Parent Organisation: N/A
+				<br>Owner: CloudFlare, Inc.</p></span>
+				<div class="icons">
+					<a href="https://123moviesgo.ga/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<div class="container1">
+				<div class="center">
+				<div class="front-face" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS-84bfH_2qKF0VLXoxYD-e7rcMVb9DnDlG1w&usqp=CAU);">
+				<div class="contents front">
+				<p>9x MOVIES</p>
+				<span>Movies</span>
+				</div>
+				</div>
+				<div class="back-face">
+				<div class="contents back">
+				<h2>9x MOVIES</h2>
+				<span> <p> 9xmovies 9xmovie 2020 9x movies 9x movie 300mb movies 9xmovies free 9xmovies.com 9xmovie torrent 9xmovies watch 72op hd movies 3d movies hindi dubbed 9xmovies
+				<br>Serivce Type: Free
+					<br>Launched: 2017-08-19
+				<br>Parent Organisation: N/A
+				<br>Owner: CloudFlare, Inc</p></span>
+				<div class="icons">
+					<a href="https://9xmovies.media/" target="_blank"> Jump <i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				
+						
+				
+
+				
+			
+		</div>
+
+
+		
+
+
+	</div>
+</div>
+
+ <!-- Footer -->
+<footer>
+    <div class="inner-width2">
+      <div class="copyright">
+        &copy; 2020 |<a href="#">vFindfit</a>
+      </div>
+      <div class="sm">
+        <a href="https://www.facebook.com/vfind.fit.1" class="fab fa-facebook-f"></a>
+        <a href="https://twitter.com/vFindfit" class="fab fa-twitter"></a>
+        <a href="https://www.instagram.com/vfindfit/" class="fab fa-instagram"></a>
+        <!-- <a href="#" class="fab fa-linkedin-in"></a>
+        <a href="#" class="fab fa-youtube"></a> -->
+      </div>
+    </div>
+  </footer>
+
+  <!-- Go Top BTN -->
+  <button class="goTop"><i class="fa fa-arrow-up"></i></button>
+
+  <div class="wrapper">
+	<a href="Categories.html">
+	<div class="icon Websites">
+	  <div class="tooltip">
+  Websites</div>
+  <span><i class="fas fa-globe"></i></span>
+	</div></a>
+	<a href="http://www.gameso.vfindfit.com/">
+  <div class="icon Games">
+	  <div class="tooltip">
+  Games</div>
+  <span><i class="fas fa-gamepad"></i></span>
+	</div></a>
+	<a href="Podcast.html">
+  <div class="icon Podcasts">
+	  <div class="tooltip">
+  Podcasts</div>
+  <span><i class="fas fa-microphone-alt"></i></span>
+	</div></a>
+	<a href="https://books.vfindfit.com/">
+  <div class="icon Books">
+	  <div class="tooltip">
+  Books</div>
+  <span><i class="far fa-bookmark"></i></span>
+	</div></a>
+	<a href="prenews.html">
+  <div class="icon News">
+	  <div class="tooltip">
+  News</div>
+  <span><i class="far fa-newspaper"></i></span>
+	</div></a>
+	<a href="Download.html">
+  <div class="icon Download">
+	  <div class="tooltip">
+  Downloader</div>
+  <span><i class="fas fa-download"></i></span>
+	</div></a>
+  </div>
+  
+  <nav class="nav">
+	<a href="Categories.html" class="nav__link">
+	  <i class="fas fa-globe"></i>
+	  <span class="nav__text">Websites</span>
+	</a>
+	<a href="http://www.gameso.vfindfit.com/" class="nav__link nav__link--active">
+	  <i class="fas fa-gamepad"></i>
+	  <span class="nav__text">Games</span>
+	</a>
+	<a href="Podcast.html" class="nav__link">
+	  <i class="fas fa-microphone-alt"></i>
+	  <span class="nav__text">Podcasts</span>
+	</a>
+	<a href="https://books.vfindfit.com/" class="nav__link">
+	  <i class="far fa-bookmark"></i>
+	  <span class="nav__text">Books</span>
+	</a>
+	<a href="prenews.html" class="nav__link">
+	  <i class="far fa-newspaper"></i>
+	  <span class="nav__text">News</span>
+	</a>
+	<a href="Download.html" class="nav__link">
+	  <i class="fas fa-download"></i>
+	  <span class="nav__text">Downloader</span>
+	</a>
+  </nav>
+  
+<!-- Nav and Loader -->
+<script>
+	$(window).on("load",function(){
+		$(".loader-container").fadeOut(1000);
+	});
+</script>
+
+<script type="text/javascript">
+	$(".menu-toggle-btn").click(function(){
+	  $(this).toggleClass("fa-times");
+	  $(".navigation-menu").toggleClass("active");
+	});
+  </script>
+
+<script>
+	$(document).ready(function(){
+  $(window).scroll(function(){
+    if(this.scrollY > 50){
+      $(".navbar").addClass("sticky");
+      $(".goTop").fadeIn();
+    }
+    else{
+      $(".navbar").removeClass("sticky");
+      $(".goTop").fadeOut();
+    }
+  });
+
+  $(".goTop").click(function(){scroll(0,0)});
+
+  $('.menu-toggler').click(function(){
+    $(this).toggleClass("active");
+    $(".navbar-menu").toggleClass("active");
+  });
+
+  $(".works").magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    gallery:{enabled:true}
+  });
+});
+
+</script>
+
+	</body>
+</html>
